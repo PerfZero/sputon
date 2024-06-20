@@ -124,6 +124,7 @@ a{
 
 .learn h3 {
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .learn p {
@@ -131,11 +132,13 @@ a{
   text-decoration: none;
   text-transform: none;
   color: #d53e76;
+
 }
 
 
 .bucket-img img{
     object-fit: cover;
+    margin-right: 15px;
 }
 
 .footer {
