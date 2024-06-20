@@ -166,7 +166,7 @@ a {
 /* store */
 
 .your-stores {
-  padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 .stores-header {
   display: flex;
@@ -242,3 +242,82 @@ a {
   color: #6d7882;
   margin-bottom: 5px;
 }
+
+.content .store{
+    padding: 0 20px;
+}
+
+
+/* filter */
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    width: 95%;
+    bottom: 10px;
+    left: 12px;
+    text-align: center;
+    z-index: 4;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 14px;
+  }
+  
+  /* Show the dropdown content when clicking on the filter */
+  .dropdown-content.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Style the dropdown items (you can customize this) */
+  .dropdown-item {
+    padding: 17px 16px;
+    text-decoration: none;
+    display: block;
+    color: #1A4265;
+    font-weight: 500;
+    border-bottom: 0.5px solid #B9B9BB;
+    background-color: #fff;
+  }
+
+  .dropdown-item:first-child {
+border-radius: 12px 12px 0 0;
+  }
+
+  .dropdown-item:nth-child(4) {
+    border-radius: 0 0 12px 12px ;
+      }
+  
+  .dropdown-item:hover {
+    background-color: #ddd;
+  }
+  
+  /* Style the cancel button (you can customize this) */
+  .dropdown-item.cancel {
+    color: #D53E76;
+    border-radius: 14px;
+    border-bottom: none;
+    margin-top: 15px;
+  }
+  
+  /* Dropdown overlay for background dimming */
+  .dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    display: none;
+    z-index: 3;
+  }
+  
+  .dropdown-overlay.show {
+    display: block;
+    overflow: hidden;
+  }

@@ -32,10 +32,18 @@
       <div class="your-stores">
         <div class="stores-header">
           <div class="title">Your stores</div>
-          <div class="filter">
+          <div class="filter" onclick="toggleDropdown()">
             DAY
             <img src="/img/day-sort.svg" alt="" />
             <!-- Arrow symbol -->
+          </div>
+          <div class="dropdown-overlay" id="dropdownOverlay"></div>
+          <div class="dropdown-content" id="dropdownContent">
+            <div class="dropdown-item">Day</div>
+            <div class="dropdown-item">Week</div>
+            <div class="dropdown-item">Month</div>
+            <div class="dropdown-item">Year</div>
+            <div class="dropdown-item cancel" onclick="closeDropdown()">Cancel</div>
           </div>
         </div>
         <div class="store-card">
@@ -144,6 +152,7 @@
               <div class="store-arrow">
                 <img src="/img/arrow-rgth.svg" alt="" />
               </div>
+             
             </div>
             <div class="store-stats">
               <div class="stat">
@@ -173,7 +182,7 @@
             </div>
           </div>
       </div>
-      <div class="content">
+      <div class="content store">
        <a href="" class="btn">Add store</a> 
       </div>
 
@@ -192,5 +201,6 @@
         </div>
       </div>
     </div>
+    <script src="/main.js"></script>
   </body>
 </html>
