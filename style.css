@@ -63,12 +63,15 @@ a{
 }
 
 .connect-wallet p {
-  font-size: 16px;
+  font-size: 4vw ;
 }
 
 .connect-wallet p::before {
+    display: inline-block;
   content: url(/img/wallet.svg);
-  margin-right: 7px;
+  margin-right: 17px;
+  width: 2vw;
+    height: 2vw;
 }
 
 .icons {
@@ -151,6 +154,7 @@ a{
   border-top: 1px solid #ddd;
   justify-content: space-between;
   width: -webkit-fill-available;
+  width: -moz-available;
 }
 .footer img {
   width: 30px;
