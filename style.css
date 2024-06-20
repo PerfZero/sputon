@@ -152,6 +152,11 @@ a {
   justify-content: space-between;
   width: 100%;
   max-width: 480px;
+  color: #1a4265;
+}
+
+.footer a {
+  color: #1a4265;
 }
 .footer img {
   width: 30px;
@@ -310,19 +315,69 @@ a {
 
 /* Dropdown overlay for background dimming */
 .dropdown-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  background-color: rgba(0, 0, 0, 0); /* Начальное состояние: прозрачный фон */
+  transition: background-color 0.5s ease-in-out; /* Анимация изменения цвета фона */
+}
+
+.dropdown-overlay.show {
+  background-color: rgba(0, 0, 0, 0.5); /* Показываем затемнение фона */
+  display: block;
+  z-index: 2;
+}
+
+/* order */
+
+.container-order {
+  background-color: #ffffff;
+  padding-bottom: 0;
+}
+
+.order.store-header {
+  display: flex;
+  padding: 20px 0 0 20px;
+  border-bottom: none;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.store-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  margin-top: 25px;
+}
+
+.store-menu_item {
+  color: #8e8e92;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.store-menu_item:first-child {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.store-menu_item:first-child::before {
+    content: "";
     display: block;
-    background-color: rgba(0, 0, 0,0); /* Начальное состояние: прозрачный фон */
-    transition: background-color 0.5s ease-in-out; /* Анимация изменения цвета фона */
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #D53E76;
   }
   
-  .dropdown-overlay.show {
-    background-color: rgba(0, 0, 0, 0.5); /* Показываем затемнение фона */
-    display: block;
-    z-index: 2;
-  }
