@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Telegram Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container container-order">
+      <div class="store-header order">
+        <div class="store-info order">
+          <img src="/img/store-cion.svg" alt="Store Logo" class="store-logo" />
+          <div>
+            <div class="store-name">Toy Seller</div>
+            <div class="store-username">@ToySellerBot</div>
+          </div>
+        </div>
+        <div class="store-menu">
+          <a href="/order.html"> <div class="store-menu_item">Orders</div></a>
+          <a href="/Catalog.html"><div class="store-menu_item activ ">Catalog</div></a>
+          <div class="store-menu_item">Analytics</div>
+          <a href="/setting.html"><div class="store-menu_item ">Settings</div></a>
+        </div>
+      </div>
+      <div class="order-contents">
+        <div class="order-filter">
+          <div class="filter-class-item">
+            <p class="filter-item" id="catalog-categories">Catalog categories</p>
+            <p class="filter-detail">All</p>
+          </div>
+
+          <div class="page-category" id="page-category">
+            <div class="page-wrapper">
+              <div class="page-content">
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item check">All</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item">Cars</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item">Trains</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item">Puzzle</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item">Lego</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list">
+                    <p class="filter-item page-item">Barbie</p>
+                  </div>
+                </div>
+                <div class="order-filter page">
+                  <div class="filter-class-item page-list last">
+                    <p class="filter-item page-item">Planes</p>
+                  </div>
+                </div>
+              </div>
+              <div class="footer page__filter">
+                <div class="contents">
+                  <div class="btn btn-catalog"  id="add-items">Save</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-class-item">
+            <p class="filter-item">Sort by</p>
+            <p class="filter-detail">Name</p>
+          </div>
+        </div>
+      </div>
+      <div class="order-contents orders">
+        <div class="order-filter catalog-list">
+          <div class="order-filter catalog-item">
+            <div class="image-catalog">
+              <img src="/img/catalog-pic.png" height="64px" width="93" alt="" />
+            </div>
+            <div class="order-main_sec catalog-list">
+              <div class="filter-class-item number-item">
+                <p class="filter-item catalog">Train</p>
+                <p class="filter-detail status catalog-status">CPA</p>
+              </div>
+              <div class="number-list__info">
+                <p class="number-list__list">486 pieces</p>
+                <p class="number-list__list">$1,200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-filter catalog-item">
+            <div class="image-catalog">
+              <img src="/img/car.png" height="64px" width="93" alt="" />
+            </div>
+            <div class="order-main_sec catalog-list">
+              <div class="filter-class-item number-item">
+                <p class="filter-item catalog">Car</p>
+              </div>
+              <div class="number-list__info">
+                <p class="number-list__list">48 pieces</p>
+                <p class="number-list__list">$820</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-filter catalog-item">
+            <div class="image-catalog">
+              <img
+                src="/img/off-piramide.png"
+                height="64px"
+                width="93"
+                alt=""
+              />
+            </div>
+            <div class="order-main_sec catalog-list">
+              <div class="filter-class-item number-item">
+                <p class="filter-item catalog off">Piramide</p>
+              </div>
+              <div class="number-list__info">
+                <p class="number-list__list off">486 pieces</p>
+                <p class="number-list__list off">$1,200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-filter catalog-item">
+            <div class="image-catalog">
+              <img src="/img/dino.png" height="64px" width="93" alt="" />
+            </div>
+            <div class="order-main_sec catalog-list">
+              <div class="filter-class-item number-item">
+                <p class="filter-item catalog">Dino</p>
+              </div>
+              <div class="number-list__info">
+                <p class="number-list__list">486 pieces</p>
+                <p class="number-list__list">$1,200</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="contents">
+          <div class="btn btn-catalog" >Add items</div>
+      </div>
+      </div>
+    </div>
+    <script src="/filter.js"></script>
+  </body>
+</html>

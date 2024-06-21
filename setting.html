@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Telegram Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container container-order">
+      <div class="store-header order">
+        <div class="store-info order">
+          <img src="/img/store-cion.svg" alt="Store Logo" class="store-logo" />
+          <div>
+            <div class="store-name">Toy Seller</div>
+            <div class="store-username">@ToySellerBot</div>
+          </div>
+        </div>
+        <div class="store-menu">
+          <a href="/order.html"> <div class="store-menu_item">Orders</div></a>
+          <a href="/Catalog.html"><div class="store-menu_item ">Catalog</div></a>
+          <div class="store-menu_item">Analytics</div>
+          <a href="/setting.html"><div class="store-menu_item activ">Settings</div></a>
+        </div>
+      </div>
+      <div class="setting__wrapper">
+        <div class="container">
+            <div class="input-group">
+                <label for="shop-logo">Shop logo</label>
+                <input type="text" id="shop-logo" placeholder="Add logo URL">
+            </div>
+            <div class="input-group">
+                <label for="store-type">Type of store</label>
+                <select id="store-type">
+                    <option value="shop">Shop</option>
+                    <option value="store">Store</option>
+                    <option value="service">Service</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="store-name">Name of store</label>
+                <input type="text" id="store-name" placeholder="Toy Seller">
+            </div>
+            <div class="input-group">
+                <label for="store-description">Description of store</label>
+                <textarea id="store-description" placeholder="Description"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="currency">Currency</label>
+                <select id="currency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="payments">Payments</label>
+                <select id="payments">
+                    <option value="crypto-bank-cards">Crypto, Bank cards</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="stripe">Stripe</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="language">Language</label>
+                <select id="language">
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="delivery">Delivery</label>
+                <select id="delivery">
+                    <option value="fedex">FeedEx</option>
+                    <option value="dhl">DHL</option>
+                    <option value="ups">UPS</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="channel-link">Channel link</label>
+                <input type="text" id="channel-link" placeholder="Enter channel link">
+            </div>
+            <div class="input-group">
+                <label for="bot-api">Bot API</label>
+                <input type="text" id="bot-api" placeholder="Enter bot API token">
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Enter email address">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+            </div>
+      </div>
+
+      <div class="footer setting-footer">
+        <div class="contents ">
+          <div class="btn btn-catalog" >Save</div>
+      </div>
+      </div>
+    </div>
+    <script src="/filter.js"></script>
+  </body>
+</html>
