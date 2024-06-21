@@ -20,7 +20,6 @@ a {
   margin: auto;
   background-color: #efeff3;
   border-radius: 10px;
-  overflow: hidden;
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
@@ -903,19 +902,21 @@ select {
 
 /* Добавляем псевдоэлемент, чтобы отобразить фоновое изображение */
 input[type="radio"]::before {
-  content: url("/img/done.svg"); /* Добавляем пустой контент */
-  display: block; /* Позволяет использовать размеры и позиционирование */
-  width: 34px; /* Размер иконки */
+  content: url(/img/done.svg);
+  display: flex;
+  width: 34px;
   height: 34px;
   text-align: center;
-  align-content: center;
+  /* align-content: center; */
   border-radius: 50%;
   background-color: #1a4265;
-  position: absolute; /* Позиционируем относительно радиобаттона */
-  top: 50%; /* Смещаем на половину размера */
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Центрируем иконку */
-  opacity: 0; /* По умолчанию скрываем иконку */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Стили для выбранного радиобаттона */
