@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Telegram Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container container-order ">
+      <div class="store-header order">
+        <div class="store-info order">
+          <a href="/index.html"
+            ><img src="/img/store-cion.svg" alt="Store Logo" class="store-logo"
+          /></a>
+          <div>
+            <div class="store-name">Toy Seller</div>
+            <div class="store-username">@ToySellerBot</div>
+          </div>
+        </div>
+        <div class="store-menu">
+          <a href="/add-item.html">
+            <div class="store-menu_item activ">Add single Item</div></a
+          >
+          <a href="/upload-item.html"
+            ><div class="store-menu_item">Upload items</div></a
+          >
+        </div>
+      </div>
+      <div class="order-contents">
+        <div class="container add-item-cont">
+          <div class="input-group">
+            <label for="Item_name">Item name</label>
+            <input type="Item_name" id="email" placeholder="Toy Seller" />
+          </div>
+          <div class="input-group">
+            <label for="Category">Category</label>
+            <select id="Category">
+              <option value="Cars">Cars</option>
+              <option value="Cars_2">Cars 2</option>
+              <option value="Cars_3">Cars 3</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="Quantity">Quantity</label>
+            <input type="Quantity" id="email" placeholder="36" />
+          </div>
+
+          <div class="input-group">
+            <label for="Price">Price</label>
+            <input type="Price" id="email" placeholder="280" />
+          </div>
+
+          <div class="input-group">
+            <label for="Currency">Currency</label>
+            <select id="Currency">
+              <option value="crypto-bank-cards">USD</option>
+              <option value="paypal">EUR</option>
+              <option value="stripe">RUB</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="store-description">Description of store</label>
+            <textarea
+              id="store-description"
+              placeholder="Description"
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <label for="store-description">Item photos</label>
+            <div class="shop_item-img">
+              <div class="shop_logo-load"></div>
+              <div class="shop_logo-load"></div>
+              <div class="shop_logo-load"></div>
+              <div class="shop_logo-load"></div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="store-description">Item thumbnail</label>
+            <div class="shop_item-img">
+              <div class="shop_logo-load"></div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="YouTube">YouTube link</label>
+            <input type="YouTube" id="YouTube" placeholder="https://t.me/toyseller" />
+          </div>
+          <div class="input-group check_box-cpa">
+                <div class="cpa">CPA</div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+          </div>
+        </div>
+      </div>
+      <div class="footer add-item_btn">
+        <div class="contents">
+          <div class="btn btn-catalog">Add items</div>
+        </div>
+      </div>
+    </div>
+    <script src="/filter.js"></script>
+  </body>
+</html>

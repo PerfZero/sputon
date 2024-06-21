@@ -146,7 +146,7 @@ a {
   bottom: 0;
   display: flex;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   justify-content: space-between;
@@ -311,6 +311,7 @@ a {
   border-radius: 14px;
   border-bottom: none;
   margin-top: 15px;
+  background-color: #fff;
 }
 
 /* Dropdown overlay for background dimming */
@@ -827,4 +828,90 @@ display: none;
   width: 22px;
   height: 22px;
   margin-right: 17px;
+}
+
+.shop_item-img{
+  display: flex;
+  flex-wrap: wrap;
+  gap:  8px;
+}
+
+
+/* Скрыть оригинальный чекбокс */
+.switch input {
+  display: none;
+}
+
+/* Стилизация контейнера для переключателя */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 31px;
+  margin-right: 15px !important;
+}
+
+/* Стилизация ползунка (slider) */
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Цвет фона неактивного переключателя */
+  transition: background-color 0.3s ease;
+  border-radius: 24px; /* Круглый ползунок */
+}
+
+/* Изменение стиля ползунка при выборе */
+.switch input:checked + .slider {
+  background-color: #1A4265; /* Цвет фона активного переключателя */
+}
+
+/* Стилизация ползунка (slider) */
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+/* Изменение позиции кнопки при выборе */
+.switch input:checked + .slider:before {
+  transform: translateX(19px); /* Перемещение кнопки вправо */
+}
+
+.check_box-cpa{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  height: 44px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.cpa{
+  padding-left: 15px;
+}
+
+.add-item_btn{
+  border-top: 0;
+  position: relative;
+  background:#EFEFF3;
+  padding: 0 0 20px 0;
+}
+
+.btn-catalog{
+  margin-top: 0;
+}
+
+.add-item-cont{
+  padding-bottom: 10px;
 }
