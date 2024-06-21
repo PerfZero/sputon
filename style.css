@@ -147,12 +147,13 @@ padding-right: 5px;
   height: 80px;
   align-content: center;
   align-items: center;
-  margin-top: 31px;
+  margin-top: 50px;
 }
 
 .learn h3 {
   font-size: 14px;
   margin-bottom: 10px;
+  color: #0E2539;
 }
 
 .learn p {
@@ -200,14 +201,19 @@ padding-right: 5px;
 
 .setting{
   width: auto !important;
+  padding-left: 10px;
 }
 
 .nav-item a{
   color: #999999;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 300;
 }
 
 .activ_item a{
   color: #1A4265;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 300;
 }
 
 
@@ -261,9 +267,10 @@ padding-right: 5px;
   margin-right: 10px;
 }
 .store-name {
+  font-family: 'SF Pro Display', sans-serif;
   font-size: 18px;
   color: #0e2539;
-  font-weight: 600;
+  font-weight: 400;
 }
 .store-username {
   color: #6d7882;
@@ -283,8 +290,8 @@ padding-right: 5px;
 }
 .stat-value {
   font-size: 15px;
-  color: #0e2539;
-  font-weight: bold;
+  color: #0E2539;
+  font-weight: 600;
 }
 .stat-label {
   color: #6d7882;
@@ -451,15 +458,17 @@ padding-right: 5px;
   color: #8e8e92;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   padding-bottom: 10px;
   position: relative;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 .activ {
   color: #000;
   font-size: 14px;
-  font-style: normal;
+  font-weight: 400;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 .activ::before {
@@ -480,15 +489,23 @@ padding-right: 5px;
 
 .order-filter {
   background-color: #fff;
-  padding: 7px 0 7px 16px;
+  padding: 0 16px;
   border-radius: 10px;
 }
 
-.filter-class-item {
+.all-check{
   display: flex;
   justify-content: space-between;
+}
+
+.filter-class-item {
+  display: flex !important;
+  justify-content: space-between !important;
   padding: 11px 0;
   border-bottom: 1px solid #dbdbdb;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 400;
+
 }
 
 .filter-class-item:last-child {
@@ -515,13 +532,56 @@ padding-right: 5px;
 
 .number-item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   border-bottom: none;
   padding: 0;
 }
 
 .number {
   margin-right: 8px;
+  color: #0E2539 !important;
+  font-weight: 500 !important;
+  font-size: 17px;
+}
+
+
+.catalog{
+  color: #0E2539 !important;
+  font-weight: 500 !important;
+}
+
+.filter-items{
+  margin-right: 8px;
+  color: #000;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.sort{
+  color: #000 !important;
+  font-weight: 400 !important;
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.filter-item{
+  margin-right: 8px;
+  color: #000;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: 'SF Pro Display', sans-serif;
+  
+  
+}
+
+.page-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gray{
+  color: #7A7A7A;
 }
 
 .number-list__list {
@@ -591,7 +651,11 @@ padding-right: 5px;
   bottom: 0;
   border-radius: 50%;
   background-color: #62cf50;
-  margin-right: 10px;
+  margin-right: 12px;
+}
+
+.off-catalog::before {
+  background-color: #D2D2D2;
 }
 
 .image-catalog {
@@ -646,15 +710,13 @@ padding-right: 5px;
 
 .check:first-child::after {
   content: url("/img/Checkmark.svg");
-  display: inline-block; /* или block, в зависимости от ваших нужд */
+  display: flex; /* или block, в зависимости от ваших нужд */
   width: 16px; /* Укажите необходимые размеры */
   height: 16px;
   margin-right: 15px;
+  
 }
 
-.check {
-  display: contents;
-}
 
 .last {
   border-bottom: none !important;
@@ -716,15 +778,28 @@ padding-right: 5px;
   background-color: #fff;
   padding: 32px 71px;
   border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.shop_logo-load:hover {
+border: 1px solid #D53E76;
+
+}
+
+.store-arrow img{
+  padding: 5px;
 }
 
 label,
 select,
 textarea,
 input {
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 400;
   border: none;
   padding: 15px 16px;
   border-radius: 10px;
+  
 }
 
 /* Стили для placeholder */
@@ -733,7 +808,7 @@ textarea::placeholder {
   /* Ваши стили для плейсхолдера */
   color: #000000; /* Пример цвета текста плейсхолдера */
   font-size: 16px;
-  font-family: "Inter", sans-serif;
+  font-family: 'SF Pro Display', sans-serif;
   opacity: 1;
 }
 
@@ -741,10 +816,16 @@ select,
 option {
   font-size: 16px; /* You can also change the font size here */
   background-color: #fff;
+  
+}
+
+.select-selected{
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 textarea {
   height: 100px;
+  
 }
 
 .setting-footer {
@@ -780,6 +861,7 @@ textarea {
   font-size: 22px;
   font-weight: bold;
   color: #0e2539;
+  margin-bottom: 5px;
 }
 
 .sub-title_details {
@@ -830,9 +912,12 @@ textarea {
 }
 
 .choose_text {
+  margin: 0;
   color: #6d7882;
   font-size: 15px;
   font-weight: 400;
+  padding-top: 24px;
+  padding-bottom: 8px;
 }
 
 .choose_block-item {
@@ -841,12 +926,13 @@ textarea {
   padding: 31px 0;
   text-align: center;
   width: 100%;
+  border: 1px solid #fff;
 }
 
 .choose_block-title {
   font-size: 17px;
   font-weight: 500;
-  padding: 8px 0 5px 0;
+  padding: 8px 0 14px 0;
 }
 
 .choose_block-subtitle {
@@ -885,10 +971,11 @@ textarea {
   border-bottom: 1px solid #dbdbdb;
   border-radius: 0;
   margin-left: 20px;
-  padding: 15px 16px 15px 0;
+  padding: 11px 16px 11px 0;
   flex-direction: row;
   align-content: center;
   align-items: center;
+
 }
 
 .choose_block-item:hover {
