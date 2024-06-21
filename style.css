@@ -723,7 +723,6 @@ textarea {
 
 .choose_type {
   padding: 0 20px;
-  flex: 1;
 }
 
 .choose_block {
@@ -915,7 +914,11 @@ display: none;
   position: relative;
   background:#EFEFF3;
   padding: 0 0 20px 0;
-  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.add-item_btn{
+  background: #EFEFF3;
 }
 
 .btn-catalog{
@@ -924,4 +927,8 @@ display: none;
 
 .add-item-cont{
   padding-bottom: 10px;
+}
+
+.type-of{
+  padding-bottom: 0;
 }
