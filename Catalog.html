@@ -22,7 +22,7 @@
           <a href="/index.html"><img src="/img/store-cion.svg" alt="Store Logo" class="store-logo" /></a>
           <div>
             <div class="store-name">Toy Seller</div>
-            <div class="store-username">@ToySellerBot</div>
+            <a href="https://t.me/ToySellerBot"><div class="store-username">@ToySellerBot</div></a>
           </div>
         </div>
         <div class="store-menu">
@@ -35,7 +35,7 @@
       <div class="order-contents">
         <div class="order-filter">
           <div class="filter-class-item">
-            <p class="filter-item" id="catalog-categories">Catalog categories</p>
+            <p class="filter-items" id="catalog-categories">Catalog categories</p>
             <p class="filter-detail">All</p>
           </div>
 
@@ -167,5 +167,13 @@
       </div>
     </div>
     <script src="/filter.js"></script>
+    <script>
+      document.querySelectorAll('.filter-item').forEach(item => {
+          item.addEventListener('click', function() {
+              document.querySelectorAll('.filter-item').forEach(el => el.classList.remove('check'));
+              this.classList.add('check');
+          });
+      });
+  </script>
   </body>
 </html>
