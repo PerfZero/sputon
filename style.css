@@ -106,7 +106,7 @@ padding-right: 5px;
 }
 .content {
   text-align: center;
-  padding: 20px;
+  padding: 0 20px 0 20px;
 }
 .content img {
   width: 110px;
@@ -131,7 +131,6 @@ padding-right: 5px;
   color: white;
   border-radius: 16px;
   text-decoration: none;
-  margin-top: 24px;
   cursor: pointer;
 }
 
@@ -237,8 +236,8 @@ padding-right: 5px;
 }
 .store-card {
   background-color: white;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 16px;
   margin-bottom: 15px;
 }
 .store-header {
@@ -246,8 +245,8 @@ padding-right: 5px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .store-info {
   display: flex;
