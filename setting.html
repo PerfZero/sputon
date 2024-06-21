@@ -39,15 +39,18 @@
                 <label for="shop-logo">Shop logo</label>
                   <div class="shop_logo-load"></div>
               </div>
-            <div class="input-group">
-                <label for="store-type">Type of store</label>
-                <select id="store-type">
-                    <option value="shop">Shop</option>
-                    <option value="store">Store</option>
-                    <option value="service">Service</option>
-                </select>
+              <div class="input-group">
+                <label for="currency">Type of store</label>
+                <div class="custom-select" id="currency">
+                  <div class="select-selected">Shop</div>
+                  <div class="select-items select-hide">
+                    <div>Store</div>
+                    <div>Service</div>
+                    <div>Shop</div>
+                  </div>
+                </div>
                 <i class="arrow-down"></i>
-            </div>
+              </div>
             <div class="input-group">
                 <label for="store-name">Name of store</label>
                 <input type="text" id="store-name" placeholder="Toy Seller">
@@ -57,40 +60,52 @@
                 <textarea id="store-description" placeholder="Description"></textarea>
             </div>
             <div class="input-group">
-                <label for="currency">Currency</label>
-                <select id="currency">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                </select>
-                <i class="arrow-down"></i>
+              <label for="currency">Currency</label>
+              <div class="custom-select" id="currency">
+                <div class="select-selected">USD</div>
+                <div class="select-items select-hide">
+                  <div>USD</div>
+                  <div>EUR</div>
+                  <div>GBP</div>
+                </div>
+              </div>
+              <i class="arrow-down"></i>
             </div>
             <div class="input-group">
-                <label for="payments">Payments</label>
-                <select id="payments">
-                    <option value="crypto-bank-cards">Crypto, Bank cards</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="stripe">Stripe</option>
-                </select>
-                <i class="arrow-down"></i>
+              <label for="currency">Payments</label>
+              <div class="custom-select" id="currency">
+                <div class="select-selected">Crypto, Bank cards</div>
+                <div class="select-items select-hide">
+                  <div>Crypto, Bank cards</div>
+                  <div>PayPal</div>
+                  <div>Stripe</div>
+                </div>
+              </div>
+              <i class="arrow-down"></i>
             </div>
             <div class="input-group">
-                <label for="language">Language</label>
-                <select id="language">
-                    <option value="english">English</option>
-                    <option value="spanish">Spanish</option>
-                    <option value="french">French</option>
-                </select>
-                <i class="arrow-down"></i>
+              <label for="currency">Language</label>
+              <div class="custom-select" id="currency">
+                <div class="select-selected">English</div>
+                <div class="select-items select-hide">
+                  <div>English</div>
+                  <div>Spanish</div>
+                  <div>French</div>
+                </div>
+              </div>
+              <i class="arrow-down"></i>
             </div>
             <div class="input-group">
-                <label for="delivery">Delivery</label>
-                <select id="delivery">
-                    <option value="fedex">FeedEx</option>
-                    <option value="dhl">DHL</option>
-                    <option value="ups">UPS</option>
-                </select>
-                <i class="arrow-down"></i>
+              <label for="currency">Delivery</label>
+              <div class="custom-select" id="currency">
+                <div class="select-selected">FeedEx</div>
+                <div class="select-items select-hide">
+                  <div>FeedEx</div>
+                  <div>DHL</div>
+                  <div>UPS</div>
+                </div>
+              </div>
+              <i class="arrow-down"></i>
             </div>
             <div class="input-group">
                 <label for="channel-link">Channel link</label>
@@ -118,5 +133,6 @@
       </div>
     </div>
     <script src="/filter.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
