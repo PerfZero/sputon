@@ -43,12 +43,14 @@
             <input type="Item_name" id="email" placeholder="Toy Seller" />
           </div>
           <div class="input-group">
-            <label for="Category">Category</label>
-            <select id="Category">
-              <option value="Cars">Cars</option>
-              <option value="Cars_2">Cars 2</option>
-              <option value="Cars_3">Cars 3</option>
-            </select>
+            <label for="currency">Cars</label>
+            <div class="custom-select" id="currency">
+              <div class="select-selected">Cars</div>
+              <div class="select-items select-hide">
+                <div>Cars1</div>
+                <div>Cars2</div>
+              </div>
+            </div>
             <i class="arrow-down"></i>
           </div>
           <div class="input-group">
@@ -62,12 +64,15 @@
           </div>
 
           <div class="input-group">
-            <label for="Currency">Currency</label>
-            <select id="Currency">
-              <option value="crypto-bank-cards">USD</option>
-              <option value="paypal">EUR</option>
-              <option value="stripe">RUB</option>
-            </select>
+            <label for="currency">Currency</label>
+            <div class="custom-select" id="currency">
+              <div class="select-selected">USD</div>
+              <div class="select-items select-hide">
+                <div>USD</div>
+                <div>EUR</div>
+                <div>GBP</div>
+              </div>
+            </div>
             <i class="arrow-down"></i>
           </div>
           <div class="input-group">
@@ -112,5 +117,6 @@
       </div>
     </div>
     <script src="/filter.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

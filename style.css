@@ -258,6 +258,53 @@ a {
   padding: 0 20px;
 }
 
+/* Стили для кастомных выпадающих списков */
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.select-selected {
+  background-color: #fff;
+  padding: 15px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  z-index: 99;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 5px 6px 19px 0px rgba(0, 0, 0, 0.14);
+
+}
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.select-items div:last-child{
+
+  border-bottom: 0;
+}
+.select-items div:hover {
+  background-color: #ddd;
+}
+.select-hide {
+  display: none;
+}
+.select-arrow-active:after {
+  border-color: transparent transparent #333 transparent;
+  top: 7px;
+}
+
 /* filter */
 
 /* Initially hide the dropdown content */
@@ -618,7 +665,7 @@ a {
   margin-top: 8px;
 }
 
-.container_wrap{
+.container_wrap {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
@@ -734,12 +781,11 @@ textarea {
   display: flex;
   flex-direction: row;
   gap: 5px;
-
 }
 
 .choose_block a {
   color: #000;
-      width: 100%;
+  width: 100%;
 }
 
 .choose_text {
@@ -754,7 +800,6 @@ textarea {
   padding: 31px 0;
   text-align: center;
   width: 100%;
-
 }
 
 .choose_block-title {
@@ -769,35 +814,32 @@ textarea {
   font-weight: 400;
 }
 
-.create-shop{
+.create-shop {
   height: 100vh;
   padding-bottom: 0;
-
 }
 
-.footer-create_shop{
+.footer-create_shop {
   background: none;
   border-top: 0;
   position: absolute;
-  bottom:  0;
+  bottom: 0;
 }
 
-
-
-.type__block{
+.type__block {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.input__block{
+.input__block {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
 }
 
-.input__block label{
+.input__block label {
   display: flex;
   border-bottom: 1px solid #dbdbdb;
   border-radius: 0;
@@ -806,7 +848,6 @@ textarea {
   flex-direction: row;
   align-content: center;
   align-items: center;
-
 }
 
 .choose_block-item:hover {
@@ -814,11 +855,11 @@ textarea {
 }
 
 .choose_block-item.selected {
-  border: 1px solid #D53E76;
+  border: 1px solid #d53e76;
 }
 
-.input__block label:last-child{
-  border-bottom:0;
+.input__block label:last-child {
+  border-bottom: 0;
 }
 
 /* Скрыть стандартные радиобуттоны */
@@ -832,14 +873,14 @@ input[type="radio"] {
   -moz-appearance: none; /* Для поддержки Firefox */
   width: 18px;
   height: 18px;
-  border: 2px solid #C7C7CC;
+  border: 2px solid #c7c7cc;
   border-radius: 50%;
   margin-right: 15px;
   outline: none; /* Убираем контур фокуса */
   position: relative; /* Для позиционирования псевдоэлемента */
 }
 
-.arrow-down{
+.arrow-down {
   content: url(/img/arrow-rgth.svg);
 }
 
@@ -847,30 +888,29 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: '';
+  text-overflow: "";
 }
 
 .input-group {
   position: relative;
 }
-.input-group  .arrow-down {
- position: absolute;
- right:20px;
- top: 47px;
- transform: rotate(90deg); /* Поворачиваем элемент на 45 градусов */
-
+.input-group .arrow-down {
+  position: absolute;
+  right: 20px;
+  top: 47px;
+  transform: rotate(90deg); /* Поворачиваем элемент на 45 градусов */
 }
 
 /* Добавляем псевдоэлемент, чтобы отобразить фоновое изображение */
 input[type="radio"]::before {
-  content: url('/img/done.svg'); /* Добавляем пустой контент */
+  content: url("/img/done.svg"); /* Добавляем пустой контент */
   display: block; /* Позволяет использовать размеры и позиционирование */
   width: 34px; /* Размер иконки */
   height: 34px;
   text-align: center;
   align-content: center;
   border-radius: 50%;
-  background-color: #1A4265; 
+  background-color: #1a4265;
   position: absolute; /* Позиционируем относительно радиобаттона */
   top: 50%; /* Смещаем на половину размера */
   left: 50%;
@@ -884,17 +924,13 @@ input[type="radio"]:checked::before {
   border: 6px solid #fff;
 }
 
-
-
-
-
-.shop_item-img{
+.shop_item-img {
   display: flex;
   flex-wrap: wrap;
-  gap:  8px;
+  gap: 8px;
 }
 
-#nextButton{
+#nextButton {
   color: #fff;
 }
 /* Скрыть оригинальный чекбокс */
@@ -926,7 +962,7 @@ input[type="radio"]:checked::before {
 
 /* Изменение стиля ползунка при выборе */
 .switch input:checked + .slider {
-  background-color: #1A4265; /* Цвет фона активного переключателя */
+  background-color: #1a4265; /* Цвет фона активного переключателя */
 }
 
 /* Стилизация ползунка (slider) */
@@ -947,7 +983,7 @@ input[type="radio"]:checked::before {
   transform: translateX(19px); /* Перемещение кнопки вправо */
 }
 
-.check_box-cpa{
+.check_box-cpa {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -957,30 +993,30 @@ input[type="radio"]:checked::before {
   justify-content: space-between;
 }
 
-.cpa{
+.cpa {
   padding-left: 15px;
 }
 
-.add-item_btn{
+.add-item_btn {
   border-top: 0;
   position: relative;
-  background:#EFEFF3;
+  background: #efeff3;
   padding: 0 0 20px 0;
   padding-top: 15px;
 }
 
-.add-item_btn{
-  background: #EFEFF3;
+.add-item_btn {
+  background: #efeff3;
 }
 
-.btn-catalog{
+.btn-catalog {
   margin-top: 0;
 }
 
-.add-item-cont{
+.add-item-cont {
   padding-bottom: 10px;
 }
 
-.type-of{
+.type-of {
   padding-bottom: 0;
 }

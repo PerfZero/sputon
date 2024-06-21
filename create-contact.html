@@ -32,29 +32,37 @@
         <div class="container type-of">
           <div class="input-group">
             <label for="currency">Currency</label>
-            <select id="currency">
-              <option value="USD">USD</option>
-              <option value="EUR">EUR</option>
-              <option value="GBP">GBP</option>
-            </select>
+            <div class="custom-select" id="currency">
+              <div class="select-selected">USD</div>
+              <div class="select-items select-hide">
+                <div>USD</div>
+                <div>EUR</div>
+                <div>GBP</div>
+              </div>
+            </div>
             <i class="arrow-down"></i>
           </div>
           <div class="input-group">
-            <label for="payments">Payments</label>
-            <select id="payments">
-              <option value="crypto-bank-cards">Crypto, Bank cards</option>
-              <option value="paypal">PayPal</option>
-              <option value="stripe">Stripe</option>
-            </select>
+            <label for="currency">Payments</label>
+            <div class="custom-select" id="currency">
+              <div class="select-selected">Crypto, Bank cards</div>
+              <div class="select-items select-hide">
+                <div>Crypto, Bank cards</div>
+                <div>PayPal</div>
+                <div>Stripe</div>
+              </div>
+            </div>
             <i class="arrow-down"></i>
           </div>
           <div class="input-group">
-            <label for="delivery">Delivery</label>
-            <select id="delivery">
-              <option value="fedex">FeedEx</option>
-              <option value="dhl">DHL</option>
-              <option value="ups">UPS</option>
-            </select>
+            <label for="currency">Delivery</label>
+            <div class="custom-select" id="currency">
+              <div class="select-selected">FeedEx</div>
+              <div class="select-items select-hide">
+                <div>DHL</div>
+                <div>UPS</div>
+              </div>
+            </div>
             <i class="arrow-down"></i>
           </div>
           <div class="input-group">
@@ -73,5 +81,6 @@
         </div>
       </div>
     </div>
+    <script src="/main.js"></script>
   </body>
 </html>

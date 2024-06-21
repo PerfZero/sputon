@@ -25,4 +25,28 @@ function toggleDropdown() {
     }
   }
 
-  
+  document.querySelectorAll('.custom-select').forEach((selectContainer) => {
+    const selected = selectContainer.querySelector('.select-selected');
+    const optionsContainer = selectContainer.querySelector('.select-items');
+    const options = optionsContainer.querySelectorAll('div');
+
+    selected.addEventListener('click', () => {
+      optionsContainer.classList.toggle('select-hide');
+      selected.classList.toggle('select-arrow-active');
+    });
+
+    options.forEach((option) => {
+      option.addEventListener('click', () => {
+        selected.textContent = option.textContent;
+        optionsContainer.classList.add('select-hide');
+        selected.classList.remove('select-arrow-active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!selectContainer.contains(e.target)) {
+        optionsContainer.classList.add('select-hide');
+        selected.classList.remove('select-arrow-active');
+      }
+    });
+  });
