@@ -776,6 +776,10 @@ textarea {
   flex: 1;
 }
 
+.choose_type .container{
+  padding-bottom: 0;
+}
+
 .choose_block {
   display: flex;
   flex-direction: row;
