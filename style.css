@@ -537,7 +537,6 @@ a {
   visibility: visible;
   transform: translateY(0);
   bottom: 1%;
-
 }
 
 .filter-class-item {
@@ -586,10 +585,9 @@ a {
   border-top: none;
 }
 
-
 /* setting */
 
-.setting__wrapper .container{
+.setting__wrapper .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -597,31 +595,45 @@ a {
   border-radius: 0;
 }
 
-
-.input-group > label{
-font-size: 15px;
-color: #6D7882;
-padding: 0;
-margin: 0;
-font-weight: 400;
+.input-group > label {
+  font-size: 15px;
+  color: #6d7882;
+  padding: 4px 0 0 0 ;
+  margin: 0;
+  font-weight: 400;
+  
 }
 
-.input-group{
+.input-group {
   display: flex;
   flex-direction: column;
-  width: 92%;
+  width: 90%;
   gap: 8px;
   margin-top: 8px;
 }
 
-label, select, textarea, input{
+.shop_logo-load{
+  content: url(/img/plus.svg);
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  padding: 32px 71px;
+  border-radius: 10px;
+
+}
+
+label,
+select,
+textarea,
+input {
   border: none;
   padding: 15px 16px;
   border-radius: 10px;
 }
 
 /* Стили для placeholder */
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   /* Ваши стили для плейсхолдера */
   color: #000000; /* Пример цвета текста плейсхолдера */
   font-size: 16px;
@@ -629,16 +641,17 @@ input::placeholder, textarea::placeholder {
   opacity: 1;
 }
 
-select, option {
+select,
+option {
   font-size: 16px; /* You can also change the font size here */
   background-color: #fff;
 }
 
-textarea{
+textarea {
   height: 100px;
 }
 
-.setting-footer{
+.setting-footer {
   background: none;
   border: none;
 }
