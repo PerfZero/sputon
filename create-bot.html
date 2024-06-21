@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Telegram Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container create-shop">
+      <div class="header__create-shop">
+        <h1 class="title-create__shop">Create your store</h1>
+        <p class="sub-title_details">Shop details</p>
+        <div class="status-header__shop">
+          <div class="bar active-bar"></div>
+          <div class="bar active-bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="choose_type">
+        <h2 class="choose_text">Type of store</h2>
+        <div class="choose_block">
+          <div class="type__block">
+            <div class="input__block">
+            <label>
+              <input type="radio" name="store_type" value="shop" checked /> Shop
+            </label>
+            <label>
+              <input type="radio" name="store_type" value="booking" /> Booking
+            </label>
+            <label>
+              <input type="radio" name="store_type" value="coming_soon" />
+              Coming soon
+            </label>
+          </div>
+            <div class="input-group">
+              <label for="currency">Theme</label>
+              <select id="currency">
+                <option value="USD">Choose theme of shop</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label for="link">Channel link</label>
+              <input type="text" value="https://t.me/toyseller" />
+            </div>
+            <div class="input-group">
+              <label for="bot">Bot API</label>
+              <input type="text" value="mnjDN_22nDU-WEJKCX..." />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer footer-create_shop ">
+        <div class="contents">
+            <a href="/create-details.html"> <div class="btn btn-catalog" >Next</div></a>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
