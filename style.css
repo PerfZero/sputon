@@ -37,22 +37,21 @@ a {
   margin-left: 10px;
 }
 .header img {
-width: 30%;
+  width: 30%;
 }
 
-.back{
-font-size: 14px;
-color: #d53e76;
-font-weight: 400;
-padding-bottom: 15px;
-display: flex;
-  }
+.back {
+  font-size: 14px;
+  color: #d53e76;
+  font-weight: 400;
+  padding-bottom: 15px;
+  display: flex;
+}
 
-.back::before{
-content: url(/img/back.svg);
-display: block;
-padding-right: 5px;
-
+.back::before {
+  content: url(/img/back.svg);
+  display: block;
+  padding-right: 5px;
 }
 .header .name {
   font-size: 17px;
@@ -90,11 +89,11 @@ padding-right: 5px;
   padding: 20px;
 }
 
-.activ_on{
-  border: 2px solid #D53E76;
+.activ_on {
+  border: 2px solid #d53e76;
 }
 
-.activ_off{
+.activ_off {
   border: 2px solid #8f9ba6;
 }
 .icons img {
@@ -119,7 +118,7 @@ padding-right: 5px;
   color: #0e2539;
 }
 
-.main-btn{
+.main-btn {
   margin-top: 24px;
 }
 .content .description {
@@ -136,6 +135,7 @@ padding-right: 5px;
   border-radius: 16px;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .read-faq {
@@ -153,7 +153,7 @@ padding-right: 5px;
 .learn h3 {
   font-size: 14px;
   margin-bottom: 10px;
-  color: #0E2539;
+  color: #0e2539;
 }
 
 .learn p {
@@ -187,8 +187,8 @@ padding-right: 5px;
   font-size: 14px;
 }
 .footer img {
-  width: 27px;
-  height: 27px;
+  width: 24px;
+  height: 24px;
 }
 .footer .nav-item {
   display: inline-block;
@@ -199,23 +199,26 @@ padding-right: 5px;
   align-items: center;
 }
 
-.setting{
+.footer .nav-item a {
+  font-size: 10px;
+}
+
+.setting {
   width: auto !important;
   padding-left: 10px;
 }
 
-.nav-item a{
+.nav-item a {
   color: #999999;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 300;
 }
 
-.activ_item a{
-  color: #1A4265;
-  font-family: 'SF Pro Display', sans-serif;
+.activ_item a {
+  color: #1a4265;
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 300;
 }
-
 
 /* store */
 
@@ -267,10 +270,10 @@ padding-right: 5px;
   margin-right: 10px;
 }
 .store-name {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   font-size: 18px;
   color: #0e2539;
-  font-weight: 400;
+  font-weight: 500;
 }
 .store-username {
   color: #6d7882;
@@ -290,7 +293,7 @@ padding-right: 5px;
 }
 .stat-value {
   font-size: 15px;
-  color: #0E2539;
+  color: #0e2539;
   font-weight: 600;
 }
 .stat-label {
@@ -310,7 +313,7 @@ padding-right: 5px;
 }
 .select-selected {
   background-color: #fff;
-  padding: 15px 16px;
+  padding: 12px 16px;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
@@ -326,7 +329,6 @@ padding-right: 5px;
   border-radius: 10px;
   border: 1px solid #dbdbdb;
   box-shadow: 5px 6px 19px 0px rgba(0, 0, 0, 0.14);
-
 }
 .select-items div {
   padding: 10px;
@@ -334,8 +336,7 @@ padding-right: 5px;
   border-bottom: 1px solid #dbdbdb;
 }
 
-.select-items div:last-child{
-
+.select-items div:last-child {
   border-bottom: 0;
 }
 .select-items div:hover {
@@ -409,6 +410,7 @@ padding-right: 5px;
   border-bottom: none;
   margin-top: 15px;
   background-color: #fff;
+  font-weight: 600;
 }
 
 /* Dropdown overlay for background dimming */
@@ -456,19 +458,26 @@ padding-right: 5px;
 
 .store-menu_item {
   color: #8e8e92;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
   padding-bottom: 10px;
   position: relative;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.052px;
 }
 
 .activ {
   color: #000;
   font-size: 14px;
-  font-weight: 400;
-  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.864px; /* 134.743% */
+  letter-spacing: -0.052px;
+  font-family: "SF Pro Display", sans-serif;
 }
 
 .activ::before {
@@ -489,11 +498,11 @@ padding-right: 5px;
 
 .order-filter {
   background-color: #fff;
-  padding: 0 16px;
+  padding: 0 0 0 16px;
   border-radius: 10px;
 }
 
-.all-check{
+.all-check {
   display: flex;
   justify-content: space-between;
 }
@@ -503,9 +512,8 @@ padding-right: 5px;
   justify-content: space-between !important;
   padding: 11px 0;
   border-bottom: 1px solid #dbdbdb;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
-
 }
 
 .filter-class-item:last-child {
@@ -539,49 +547,46 @@ padding-right: 5px;
 
 .number {
   margin-right: 8px;
-  color: #0E2539 !important;
+  color: #0e2539 !important;
   font-weight: 500 !important;
   font-size: 17px;
 }
 
-
-.catalog{
-  color: #0E2539 !important;
+.catalog {
+  color: #0e2539 !important;
   font-weight: 500 !important;
 }
 
-.filter-items{
+.filter-items {
   margin-right: 8px;
   color: #000;
   font-weight: 400;
   font-size: 17px;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
-.sort{
+.sort {
   color: #000 !important;
   font-weight: 400 !important;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 }
 
-.filter-item{
+.filter-item {
   margin-right: 8px;
   color: #000;
   font-weight: 400;
   font-size: 17px;
-  font-family: 'SF Pro Display', sans-serif;
-  
-  
+  font-family: "SF Pro Display", sans-serif;
 }
 
-.page-item{
+.page-item {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.gray{
-  color: #7A7A7A;
+.gray {
+  color: #7a7a7a;
 }
 
 .number-list__list {
@@ -637,6 +642,7 @@ padding-right: 5px;
   gap: 15px;
   border-bottom: 1px solid #dbdbdb;
   border-radius: 0;
+  padding: 0;
 }
 
 .catalog-list {
@@ -655,7 +661,7 @@ padding-right: 5px;
 }
 
 .off-catalog::before {
-  background-color: #D2D2D2;
+  background-color: #d2d2d2;
 }
 
 .image-catalog {
@@ -714,9 +720,7 @@ padding-right: 5px;
   width: 16px; /* Укажите необходимые размеры */
   height: 16px;
   margin-right: 15px;
-  
 }
-
 
 .last {
   border-bottom: none !important;
@@ -754,6 +758,7 @@ padding-right: 5px;
   padding: 4px 0 0 0;
   margin: 0;
   font-weight: 400;
+  font-family: "Inter", sans-serif;
 }
 
 .input-group {
@@ -761,7 +766,7 @@ padding-right: 5px;
   flex-direction: column;
   width: 100%;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
 .container_wrap {
@@ -782,11 +787,10 @@ padding-right: 5px;
 }
 
 .shop_logo-load:hover {
-border: 1px solid #D53E76;
-
+  border: 1px solid #d53e76;
 }
 
-.store-arrow img{
+.store-arrow img {
   padding: 5px;
 }
 
@@ -794,12 +798,12 @@ label,
 select,
 textarea,
 input {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
   border: none;
-  padding: 15px 16px;
+  padding: 10px 15px;
   border-radius: 10px;
-  
+  font-size: 17px;
 }
 
 /* Стили для placeholder */
@@ -808,7 +812,7 @@ textarea::placeholder {
   /* Ваши стили для плейсхолдера */
   color: #000000; /* Пример цвета текста плейсхолдера */
   font-size: 16px;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
   opacity: 1;
 }
 
@@ -816,16 +820,14 @@ select,
 option {
   font-size: 16px; /* You can also change the font size here */
   background-color: #fff;
-  
 }
 
-.select-selected{
-  font-family: 'SF Pro Display', sans-serif;
+.select-selected {
+  font-family: "SF Pro Display", sans-serif;
 }
 
 textarea {
   height: 100px;
-  
 }
 
 .setting-footer {
@@ -896,7 +898,7 @@ textarea {
   flex: 1;
 }
 
-.choose_type .container{
+.choose_type .container {
   padding-bottom: 0;
 }
 
@@ -971,11 +973,11 @@ textarea {
   border-bottom: 1px solid #dbdbdb;
   border-radius: 0;
   margin-left: 20px;
-  padding: 11px 16px 11px 0;
+  padding: 11px 9px 11px 0;
+  margin-left: 56px;
   flex-direction: row;
   align-content: center;
   align-items: center;
-
 }
 
 .choose_block-item:hover {
@@ -996,7 +998,7 @@ input[type="radio"] {
   -ms-transform: scale(0.5); /* IE 9 */
   -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
   transform: scale(0.9);
-
+  padding: 10px 10px;
   -webkit-appearance: none; /* Для поддержки вебкит-браузеров */
   -moz-appearance: none; /* Для поддержки Firefox */
   width: 18px;
@@ -1005,7 +1007,8 @@ input[type="radio"] {
   border-radius: 50%;
   margin-right: 15px;
   outline: none; /* Убираем контур фокуса */
-  position: relative; /* Для позиционирования псевдоэлемента */
+  position: absolute;
+  left: 30px;
 }
 
 .arrow-down {
@@ -1033,8 +1036,8 @@ select {
 input[type="radio"]::before {
   content: url(/img/done.svg);
   display: flex;
-  width: 34px;
-  height: 34px;
+  width: 26px;
+  height: 26px;
   text-align: center;
   /* align-content: center; */
   border-radius: 50%;
