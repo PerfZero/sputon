@@ -50,3 +50,19 @@ function toggleDropdown() {
       }
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.icons .image');
+
+    icons.forEach(icon => {
+      icon.addEventListener('click', function() {
+        if (this.classList.contains('activ_on')) {
+          this.classList.remove('activ_on');
+          this.classList.add('activ_off');
+        } else {
+          this.classList.remove('activ_off');
+          this.classList.add('activ_on');
+        }
+      });
+    });
+  });
