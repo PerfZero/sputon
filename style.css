@@ -118,6 +118,10 @@ padding-right: 5px;
   margin-top: 10px;
   color: #0e2539;
 }
+
+.main-btn{
+  margin-top: 24px;
+}
 .content .description {
   color: #666;
   margin-top: 16px;
@@ -143,7 +147,7 @@ padding-right: 5px;
   height: 80px;
   align-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 31px;
 }
 
 .learn h3 {
