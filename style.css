@@ -655,3 +655,19 @@ textarea {
   background: none;
   border: none;
 }
+
+.analitics{
+  margin-bottom: 16px;
+}
+
+.statics_wrap{
+  padding: 16px;
+}
+
+.plus-stat{
+  color: #3C7D46;
+}
+
+.minus-stat{
+  color: #A94040;
+}
