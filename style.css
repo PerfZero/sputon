@@ -1200,7 +1200,7 @@ input[type="radio"]:checked::before {
   height: 27px;
   width: 27px;
   left: 3px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   transition: transform 0.3s ease;
   border-radius: 50%;
