@@ -1072,6 +1072,7 @@ textarea {
   flex-direction: row;
   align-content: center;
   align-items: center;
+  color: #000;
 }
 
 .choose_block-item:hover {
