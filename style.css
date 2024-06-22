@@ -187,8 +187,8 @@ a {
   font-size: 14px;
 }
 .footer img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 .footer .nav-item {
   display: inline-block;
@@ -198,6 +198,23 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  
+}
+
+.nav-item > div{
+  color: #1A4265;
+
+text-align: center;
+font-family: "SF Pro Display", sans-serif;
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.inavtiv div{
+  color: #999;
+
 }
 
 .footer .nav-item a {
