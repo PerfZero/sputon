@@ -147,13 +147,14 @@ a {
 }
 
 .btn:hover {
-  background-color: #B12D5E;
-  border: 3px solid #B12D5E
+  background-color: #d53e76;
+  border: 3px solid #B12D5E;
+
 }
 
 .btn:focus {
-  background-color: #d53e76;
-  border: 3px solid #B12D5E;
+  background-color: #B12D5E;
+  border: 3px solid #B12D5E
 }
 
 .read-faq {
