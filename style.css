@@ -285,6 +285,27 @@ a {
 .stat-page{
   gap: 30px;
 }
+
+.add-item-menu{
+  margin-top: 18px !important;
+}
+
+.item-menu-order{
+  padding: 0 16px 16px 16px !important;
+}
+
+.add-item-title{
+  color: #0E2539;
+
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: Inter;
+font-size: 17px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 105.882% */
+}
+
+
 .store-stats {
   display: flex;
   flex-wrap: wrap;
