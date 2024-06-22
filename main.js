@@ -4,7 +4,6 @@ function toggleDropdown() {
     dropdownContent.classList.toggle('show');
     dropdownOverlay.classList.toggle('show');
     
-    // Disable scrolling
     document.body.style.overflow = 'hidden';
   }
   
@@ -14,11 +13,10 @@ function toggleDropdown() {
     dropdownContent.classList.remove('show');
     dropdownOverlay.classList.remove('show');
     
-    // Enable scrolling back
     document.body.style.overflow = 'auto';
   }
   
-  // Close the dropdown if the user clicks outside of it
+
   window.onclick = function(event) {
     if (!event.target.matches('.filter')) {
       closeDropdown();

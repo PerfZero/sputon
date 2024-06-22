@@ -11,11 +11,9 @@ h3 {
   padding: 0;
 }
 
-div{
+div {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-
 
 a {
   text-decoration: none;
@@ -47,23 +45,6 @@ a {
   width: 30%;
 }
 
-.back {
-  font-size: 14px;
-  color: #d53e76;
-  font-weight: 400;
-  padding-bottom: 18px;
-  display: flex;
-}
-
-.back:hover{
-  color: #B12D5E;
-}
-
-.back::before {
-  content: url(/img/back.svg);
-  display: block;
-  padding-right: 5px;
-}
 .header .name {
   font-size: 17px;
   font-weight: bold;
@@ -150,23 +131,20 @@ a {
   border: 3px solid #d53e76;
 }
 
-.disabled{
-  background-color: #C2C2C2;
-  border: 3px solid #C2C2C2
+.disabled {
+  background-color: #c2c2c2;
+  border: 3px solid #c2c2c2;
 }
 
 .btn:hover {
-  background-color: #B12D5E;
-  border: 3px solid #B12D5E
+  background-color: #b12d5e;
+  border: 3px solid #b12d5e;
 }
 
 .btn:focus {
-  background-color: #B12D5E;
-  border: 3px solid #B12D5E
+  background-color: #b12d5e;
+  border: 3px solid #b12d5e;
 }
-
-
-
 
 .read-faq {
   background-color: #fff;
@@ -228,23 +206,21 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  
 }
 
-.nav-item > div{
-  color: #1A4265;
+.nav-item > div {
+  color: #1a4265;
 
-text-align: center;
-font-family: "SF Pro Display", sans-serif;
-font-size: 10px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  text-align: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.inavtiv div{
+.inavtiv div {
   color: #999;
-
 }
 
 .footer .nav-item a {
@@ -331,29 +307,28 @@ line-height: normal;
   color: #ccc;
 }
 
-.stat-page{
+.stat-page {
   gap: 30px;
 }
 
-.add-item-menu{
+.add-item-menu {
   margin-top: 18px !important;
 }
 
-.item-menu-order{
+.item-menu-order {
   padding: 0 16px 16px 16px !important;
 }
 
-.add-item-title{
-  color: #0E2539;
+.add-item-title {
+  color: #0e2539;
 
-font-feature-settings: 'clig' off, 'liga' off;
-font-family: Inter;
-font-size: 17px;
-font-style: normal;
-font-weight: 500;
-line-height: 18px; /* 105.882% */
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
 }
-
 
 .store-stats {
   display: flex;
@@ -431,7 +406,6 @@ line-height: 18px; /* 105.882% */
 
 /* filter */
 
-/* Initially hide the dropdown content */
 .dropdown-content {
   position: fixed;
   min-width: 160px;
@@ -443,22 +417,19 @@ line-height: 18px; /* 105.882% */
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
   border-radius: 14px;
-  transition: 0.5s ease-in-out; /* Added transition */
+  transition: 0.5s ease-in-out;
 }
 
-/* Show the dropdown content when clicking on the filter */
 .dropdown-content.show {
-  bottom: 1%; /* Move the dropdown to the bottom of the screen */
+  bottom: 1%;
 }
 
-/* Show the dropdown content when clicking on the filter */
 .dropdown-content.show {
   display: block;
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Style the dropdown items (you can customize this) */
 .dropdown-item {
   padding: 17px 16px;
   text-decoration: none;
@@ -482,7 +453,6 @@ line-height: 18px; /* 105.882% */
   background-color: #ddd;
 }
 
-/* Style the cancel button (you can customize this) */
 .dropdown-item.cancel {
   color: #d53e76;
   border-radius: 14px;
@@ -492,7 +462,6 @@ line-height: 18px; /* 105.882% */
   font-weight: 600;
 }
 
-/* Dropdown overlay for background dimming */
 .dropdown-overlay {
   position: fixed;
   top: 0;
@@ -501,12 +470,12 @@ line-height: 18px; /* 105.882% */
   height: 100%;
   z-index: -1;
   display: block;
-  background-color: rgba(0, 0, 0, 0); /* Начальное состояние: прозрачный фон */
-  transition: background-color 0.5s ease-in-out; /* Анимация изменения цвета фона */
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease-in-out;
 }
 
 .dropdown-overlay.show {
-  background-color: rgba(0, 0, 0, 0.5); /* Показываем затемнение фона */
+  background-color: rgba(0, 0, 0, 0.5);
   display: block;
   z-index: 2;
 }
@@ -609,8 +578,8 @@ line-height: 18px; /* 105.882% */
   padding-right: 15px;
   font-family: "SF Pro Display", sans-serif;
   font-size: 17px;
-font-style: normal;
-font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .orders {
@@ -799,8 +768,8 @@ font-weight: 400;
 
 .check:first-child::after {
   content: url("/img/Checkmark.svg");
-  display: flex; /* или block, в зависимости от ваших нужд */
-  width: 16px; /* Укажите необходимые размеры */
+  display: flex;
+  width: 16px;
   height: 16px;
   margin-right: 15px;
 }
@@ -858,7 +827,7 @@ font-weight: 400;
   width: 92%;
 }
 
-.setting__wrapper .container{
+.setting__wrapper .container {
   padding-bottom: 10px;
 }
 .shop_logo-load {
@@ -880,8 +849,8 @@ font-weight: 400;
 }
 
 input[type="radio"]:disabled + label {
-  color: gray; /* Меняет цвет текста метки */
-  cursor: not-allowed; /* Меняет вид курсора на "неразрешающий" */
+  color: gray;
+  cursor: not-allowed;
 }
 
 label,
@@ -897,10 +866,8 @@ input {
   color: #7a7a7a;
 }
 
-/* Стили для placeholder */
 input::placeholder,
 textarea::placeholder {
-  /* Ваши стили для плейсхолдера */
   color: #7a7a7a;
   font-size: 16px;
   font-family: "SF Pro Display", sans-serif;
@@ -909,7 +876,7 @@ textarea::placeholder {
 
 select,
 option {
-  font-size: 16px; /* You can also change the font size here */
+  font-size: 16px;
   background-color: #fff;
 }
 
@@ -925,7 +892,7 @@ textarea {
   background: none;
   border: none;
   position: relative;
-  background-color: #EFEFF3;
+  background-color: #efeff3;
 }
 
 .analitics {
@@ -1085,24 +1052,23 @@ textarea {
 
 .input__block label:last-child {
   border-bottom: 0;
-  color: #C7C7CC;
+  color: #c7c7cc;
 }
 
-/* Скрыть стандартные радиобуттоны */
 input[type="radio"] {
-  appearance: none; /* Убираем стандартный внешний вид */
-  -ms-transform: scale(0.5); /* IE 9 */
-  -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */
+  appearance: none;
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
   transform: scale(0.9);
   padding: 10px 10px;
-  -webkit-appearance: none; /* Для поддержки вебкит-браузеров */
-  -moz-appearance: none; /* Для поддержки Firefox */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   width: 18px;
   height: 18px;
   border: 2px solid #c7c7cc;
   border-radius: 50%;
   margin-right: 15px;
-  outline: none; /* Убираем контур фокуса */
+  outline: none;
   position: absolute;
   left: 30px;
 }
@@ -1125,17 +1091,15 @@ select {
   position: absolute;
   right: 20px;
   top: 47px;
-  transform: rotate(90deg); /* Поворачиваем элемент на 45 градусов */
+  transform: rotate(90deg);
 }
 
-/* Добавляем псевдоэлемент, чтобы отобразить фоновое изображение */
 input[type="radio"]::before {
   content: url(/img/done.svg);
   display: flex;
   width: 26px;
   height: 26px;
   text-align: center;
-  /* align-content: center; */
   border-radius: 50%;
   background-color: #1a4265;
   position: absolute;
@@ -1147,9 +1111,8 @@ input[type="radio"]::before {
   align-items: center;
 }
 
-/* Стили для выбранного радиобаттона */
 input[type="radio"]:checked::before {
-  opacity: 1; /* Показываем иконку для выбранного состояния */
+  opacity: 1;
   border: 6px solid #fff;
 }
 
@@ -1158,7 +1121,7 @@ input:disabled {
   background-color: #fff;
 }
 
-input[type]{
+input[type] {
   color: #000;
 }
 
@@ -1175,12 +1138,11 @@ textarea {
 #nextButton {
   color: #fff;
 }
-/* Скрыть оригинальный чекбокс */
+
 .switch input {
   display: none;
 }
 
-/* Стилизация контейнера для переключателя */
 .switch {
   position: relative;
   display: inline-block;
@@ -1189,7 +1151,6 @@ textarea {
   margin-right: 15px !important;
 }
 
-/* Стилизация ползунка (slider) */
 .switch .slider {
   position: absolute;
   cursor: pointer;
@@ -1197,17 +1158,15 @@ textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc; /* Цвет фона неактивного переключателя */
+  background-color: #ccc;
   transition: background-color 0.3s ease;
-  border-radius: 24px; /* Круглый ползунок */
+  border-radius: 24px;
 }
 
-/* Изменение стиля ползунка при выборе */
 .switch input:checked + .slider {
-  background-color: #1a4265; /* Цвет фона активного переключателя */
+  background-color: #1a4265;
 }
 
-/* Стилизация ползунка (slider) */
 .switch .slider:before {
   position: absolute;
   content: "";
@@ -1220,9 +1179,8 @@ textarea {
   border-radius: 50%;
 }
 
-/* Изменение позиции кнопки при выборе */
 .switch input:checked + .slider:before {
-  transform: translateX(19px); /* Перемещение кнопки вправо */
+  transform: translateX(19px);
 }
 
 .check_box-cpa {
@@ -1262,4 +1220,22 @@ textarea {
 
 .type-of {
   padding-bottom: 0;
+}
+
+.back {
+  font-size: 14px;
+  color: #d53e76;
+  font-weight: 400;
+  padding-bottom: 18px;
+  display: flex;
+}
+
+.back:hover {
+  color: #b12d5e;
+}
+
+.back::before {
+  content: url(/img/back.svg);
+  display: block;
+  padding-right: 5px;
 }
