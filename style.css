@@ -1155,7 +1155,14 @@ input[type="radio"]:checked::before {
 input:disabled {
   cursor: default;
   background-color: #fff;
+}
 
+input[type]{
+  color: #000;
+}
+
+textarea {
+  color: #000;
 }
 
 .shop_item-img {
