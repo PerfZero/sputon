@@ -894,13 +894,14 @@ input {
   padding: 10px 15px;
   border-radius: 10px;
   font-size: 17px;
+  color: #7a7a7a;
 }
 
 /* Стили для placeholder */
 input::placeholder,
 textarea::placeholder {
   /* Ваши стили для плейсхолдера */
-  color: #C7C7CC; /* Пример цвета текста плейсхолдера */
+  color: #7a7a7a;
   font-size: 16px;
   font-family: "SF Pro Display", sans-serif;
   opacity: 1;
