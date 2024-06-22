@@ -1152,6 +1152,12 @@ input[type="radio"]:checked::before {
   border: 6px solid #fff;
 }
 
+input:disabled {
+  cursor: default;
+  background-color: #fff;
+
+}
+
 .shop_item-img {
   display: flex;
   flex-wrap: wrap;
