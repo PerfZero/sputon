@@ -55,6 +55,10 @@ a {
   display: flex;
 }
 
+.back:hover{
+  color: #B12D5E;
+}
+
 .back::before {
   content: url(/img/back.svg);
   display: block;
@@ -143,7 +147,12 @@ a {
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
-  border: 3px solid #d53e76
+  border: 3px solid #d53e76;
+}
+
+.disabled{
+  background-color: #C2C2C2;
+  border: 3px solid #C2C2C2
 }
 
 .btn:hover {
@@ -155,6 +164,9 @@ a {
   background-color: #B12D5E;
   border: 3px solid #B12D5E
 }
+
+
+
 
 .read-faq {
   background-color: #fff;
