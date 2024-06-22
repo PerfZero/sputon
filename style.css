@@ -25,7 +25,7 @@ a {
   flex-direction: column;
 }
 .header {
-  padding: 20px;
+  padding: 40px 16px 20px 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,7 +86,7 @@ a {
 .icons {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 13px;
 }
 
 .activ_on {
@@ -223,7 +223,7 @@ a {
 /* store */
 
 .your-stores {
-  padding: 20px 20px 0 20px;
+  padding: 10px 16px 0 16px;
 }
 .stores-header {
   display: flex;
@@ -259,7 +259,7 @@ a {
   align-items: center;
   border-bottom: 1px solid #ddd;
   padding-bottom: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 .store-info {
   display: flex;
@@ -270,8 +270,7 @@ a {
   margin-right: 10px;
 }
 .store-name {
-  font-family: "SF Pro Display", sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   color: #0e2539;
   font-weight: 500;
 }
@@ -282,14 +281,23 @@ a {
   font-size: 18px;
   color: #ccc;
 }
+
+.stat-page{
+  gap: 30px;
+}
 .store-stats {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px;
 }
 .stat {
   flex: 1 1 45%;
   margin-bottom: 10px;
+  max-width: 159px;
 }
 .stat-value {
   font-size: 15px;
@@ -299,6 +307,7 @@ a {
 .stat-label {
   color: #6d7882;
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
 .content .store {
@@ -493,12 +502,12 @@ a {
 
 .order-contents {
   background-color: #efeff3;
-  padding: 20px;
+  padding: 16px;
 }
 
 .order-filter {
   background-color: #fff;
-  padding: 0 0 0 16px;
+  padding: 0 0 0 12px;
   border-radius: 10px;
 }
 
@@ -528,6 +537,10 @@ a {
 .filter-detail {
   color: rgba(60, 60, 67, 0.6);
   padding-right: 15px;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 17px;
+font-style: normal;
+font-weight: 400;
 }
 
 .orders {
@@ -748,7 +761,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 24px;
   border-radius: 0;
 }
 
@@ -766,16 +778,19 @@ a {
   flex-direction: column;
   width: 100%;
   gap: 8px;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 .container_wrap {
-  padding: 0 20px;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 92%;
 }
 
+.setting__wrapper .container{
+  padding-bottom: 10px;
+}
 .shop_logo-load {
   content: url(/img/plus.svg);
   width: 24px;
@@ -827,12 +842,14 @@ option {
 }
 
 textarea {
-  height: 100px;
+  height: 75px;
 }
 
 .setting-footer {
   background: none;
   border: none;
+  position: relative;
+  background-color: #EFEFF3;
 }
 
 .analitics {
