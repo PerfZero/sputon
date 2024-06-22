@@ -321,6 +321,7 @@ line-height: normal;
   font-size: 17px;
   color: #0e2539;
   font-weight: 500;
+  margin-bottom: 3px;
 }
 .store-username {
   color: #6d7882;
@@ -757,7 +758,7 @@ font-weight: 400;
 }
 
 .contents {
-  padding: 0 20px;
+  padding: 0 16px;
   width: 100%;
 }
 
@@ -836,7 +837,7 @@ font-weight: 400;
 .input-group > label {
   font-size: 15px;
   color: #6d7882;
-  padding: 4px 0 0 0;
+  padding: 0 0 0 0;
   margin: 0;
   font-weight: 400;
   font-family: "Inter", sans-serif;
@@ -878,6 +879,11 @@ font-weight: 400;
   padding: 5px;
 }
 
+input[type="radio"]:disabled + label {
+  color: gray; /* Меняет цвет текста метки */
+  cursor: not-allowed; /* Меняет вид курсора на "неразрешающий" */
+}
+
 label,
 select,
 textarea,
@@ -894,7 +900,7 @@ input {
 input::placeholder,
 textarea::placeholder {
   /* Ваши стили для плейсхолдера */
-  color: #000000; /* Пример цвета текста плейсхолдера */
+  color: #C7C7CC; /* Пример цвета текста плейсхолдера */
   font-size: 16px;
   font-family: "SF Pro Display", sans-serif;
   opacity: 1;
@@ -980,12 +986,13 @@ textarea {
 }
 
 .choose_type {
-  padding: 0 20px;
+  padding: 0 16px;
   flex: 1;
 }
 
 .choose_type .container {
   padding-bottom: 0;
+  padding-top: 10px;
 }
 
 .choose_block {
@@ -1076,6 +1083,7 @@ textarea {
 
 .input__block label:last-child {
   border-bottom: 0;
+  color: #C7C7CC;
 }
 
 /* Скрыть стандартные радиобуттоны */
@@ -1221,7 +1229,7 @@ input[type="radio"]:checked::before {
   position: relative;
   background: #efeff3;
   padding: 0 0 20px 0;
-  padding-top: 15px;
+  padding-top: 25px;
 }
 
 .add-item_btn {
@@ -1234,6 +1242,7 @@ input[type="radio"]:checked::before {
 
 .add-item-cont {
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .type-of {
