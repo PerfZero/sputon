@@ -43,6 +43,10 @@ a {
   overflow-y: scroll;
 }
 
+.fix {
+  height: auto !important;
+}
+
 /* Стили для iOS */
 .ios .container {
   overflow-y: scroll;
