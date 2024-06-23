@@ -6,6 +6,10 @@
 }
 
 
+body, html {
+  overflow: hidden;
+}
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
