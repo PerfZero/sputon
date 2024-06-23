@@ -42,7 +42,7 @@ a {
   display: flex;
   flex-direction: column;
   /* height: calc(100vh - 100px); /* 100vh минус высота футера */
-  overflow-y: scroll; */
+  /* overflow-y: scroll; */ */
 }
 
 .fix {
