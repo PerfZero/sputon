@@ -58,6 +58,7 @@ a {
 
 .fix-footer{
   background-color: #fff !important;
+  padding: 20px 0 !important;
 }
 
 .catalog-h{
@@ -531,6 +532,7 @@ a {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 0;
+  background-color: #fff;
 }
 
 .store-menu {
