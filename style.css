@@ -30,6 +30,10 @@ a {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px); /* 100vh минус высота футера */
+}
+
+/* Стили для iOS */
+.ios .container {
   overflow-y: scroll;
 }
 .header {
