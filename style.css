@@ -500,6 +500,7 @@ a {
   background-color: #ffffff;
   padding-bottom: 0;
   border-radius: 0;
+  height: auto;
 }
 
 .order.store-header {
