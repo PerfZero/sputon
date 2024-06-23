@@ -29,7 +29,7 @@ a {
   padding-bottom: 150px;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* или viewport-stable-height, если поддерживается */
+  height: calc(100vh - 100px); /* 100vh минус высота хедера и футера */
   overflow-y: scroll;
 }
 .header {
