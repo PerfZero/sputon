@@ -56,6 +56,13 @@ a {
 
 }
 
+.fix-footer{
+  background-color: #fff !important;
+}
+
+.catalog-h{
+  height:100vh; /* 100vh минус высота футера */
+}
 
 .header {
   padding: 40px 16px 20px 16px;
