@@ -34,7 +34,7 @@ a {
 }
 .container {
   width: 100%;
-  max-width: 480px;
+
   margin: auto;
   background-color: #efeff3;
   border-radius: 10px;
@@ -1116,6 +1116,7 @@ textarea {
   align-content: center;
   align-items: center;
   color: #000;
+  position: relative;
 }
 
 .choose_block-item:hover {
@@ -1146,7 +1147,7 @@ input[type="radio"] {
   margin-right: 15px;
   outline: none;
   position: absolute;
-  left: 30px;
+  left: -43px;
 }
 
 .arrow-down {
