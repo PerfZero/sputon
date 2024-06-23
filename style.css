@@ -47,8 +47,6 @@ a {
 /* Стили для iOS */
 .ios .container {
   overflow-y: scroll;
-  height: 100vh; /* 100vh или viewport-stable-height */
-  overflow-y: scroll;
   height: calc(100vh - 100px); /* 100vh минус высота футера */
 
 }
