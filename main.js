@@ -64,13 +64,3 @@ function toggleDropdown() {
       });
     });
   });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
-    if (/android/i.test(userAgent)) {
-        document.body.classList.add('android');
-    } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        document.body.classList.add('ios');
-    }
-});

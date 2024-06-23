@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #efeff3;
+  overflow: hidden;
 }
 
 p,
@@ -28,21 +29,8 @@ a {
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 100px); /* 100vh минус высота футера */
   overflow-y: scroll;
-}
-
-/* Стили для Android */
-.android .app-container {
-  height: 100vh; /* или viewport-stable-height, если поддерживается */
-  overflow-y: scroll;
-  padding-bottom: 40px; /* отступ снизу, чтобы контент не перекрывался футером */
-}
-
-/* Стили для iOS */
-.ios .app-container {
-  height: calc(100vh - 40px); /* 100vh минус высота футера */
-  overflow-y: scroll;
-  padding-bottom: 40px; /* отступ снизу, чтобы контент не перекрывался футером */
 }
 .header {
   padding: 40px 16px 20px 16px;
