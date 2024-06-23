@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var os = getMobileOperatingSystem();
 
   if (os === "iOS") {
-      footer.style.padding = "10px 0"; // паддинг для iOS
+      footer.style.padding = "20px 0"; // паддинг для iOS
   } else {
-      footer.style.padding = "20px 0"; // паддинг для Android
+      footer.style.padding = "10px 0"; // паддинг для Android
   }
 });
