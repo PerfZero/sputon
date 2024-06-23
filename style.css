@@ -1130,6 +1130,10 @@ input[type="radio"] {
   content: url(/img/arrow-rgth.svg);
 }
 
+.fix-all{
+  height: 100vh;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
