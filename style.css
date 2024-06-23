@@ -41,8 +41,8 @@ a {
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
-  /* height: calc(100vh - 100px); /* 100vh минус высота футера */
-  /* overflow-y: scroll; */ 
+  height: calc(100vh - 100px); 
+  overflow-y: scroll; 
 }
 
 .fix {
