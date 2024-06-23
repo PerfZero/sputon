@@ -226,6 +226,20 @@ a {
   color: #1a4265;
 }
 
+.footers {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  padding: 0; /* общий паддинг */
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  color: #1a4265;
+}
+
 .footer a {
   color: #1a4265;
   font-size: 14px;
