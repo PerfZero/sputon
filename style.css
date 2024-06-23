@@ -29,13 +29,11 @@ a {
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 
 /* Стили для Android */
 .android .app-container {
   height: 100vh; /* или viewport-stable-height, если поддерживается */
-  overflow-y: scroll;
   padding-bottom: 40px; /* отступ снизу, чтобы контент не перекрывался футером */
 }
 
