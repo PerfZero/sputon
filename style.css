@@ -6,6 +6,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* body, html {
   overflow: hidden;
 } */
@@ -16,6 +20,7 @@ body {
   padding: 0;
   background-color: #efeff3;
   /* overflow-y: scroll; */
+  
 }
 
 p,
@@ -1317,4 +1322,148 @@ textarea {
   content: url(/img/back.svg);
   display: block;
   padding-right: 5px;
+}
+
+.image-market{
+  width: auto;
+  height:300px ;
+  background-color: #fff;
+}
+
+nav {
+  position: absolute;
+  top: 42%; /* начальная позиция navbar на середине экрана */
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+
+}
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  height: 42px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 15px;
+}
+
+nav ul li a {
+  color: #8e8e92;
+  padding-bottom: 10px;
+  position: relative;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.052px;
+}
+
+nav ul li a.active {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18.864px;
+  letter-spacing: -0.052px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  border-radius: 5px 5px 0 0;
+  background-color: #d53e76;
+}
+
+#content {
+  padding-top: 60px; /* For fixed navbar */
+}
+
+.item__book img{
+  width: 100%;
+  height: auto;
+}
+
+.menu-list__book{
+  background-color: #fff;
+  height: 250px;
+  max-width: 191px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+
+.menu-category{
+  display: none; /* Скрываем контент по умолчанию */
+  flex-wrap: wrap;
+  gap: 15px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.market-stat{
+  padding: 12px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+.stat-market-l{
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+.buy{
+  padding: 6px 30px;
+  position: absolute;
+  transform: translate(4%, 18%);
+  width: 90%;
+
+}
+
+.toggle-btn h2 {
+position: relative;
+display: flex;
+}
+
+.toggle-btn h2::after {
+  content: url(/img/arrow-rgth.svg);
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+section.expanded h2::after {
+  transform: rotate(90deg);
+}
+
+.menu-category {
+
+}
+
+section.expanded .menu-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+button.toggle-btn {
+  margin-left: 10px;
 }

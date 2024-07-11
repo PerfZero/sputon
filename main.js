@@ -94,3 +94,4 @@ document.addEventListener("DOMContentLoaded", function() {
       footer.style.padding = "10px 0"; // паддинг для Android
   }
 });
+

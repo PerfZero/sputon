@@ -1,26 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var filterItem = document.getElementById('catalog-categories');
-    var pageCategory = document.getElementById('page-category');
-    var addItemsButton = document.getElementById('add-items');
 
-    console.log('filterItem:', filterItem);
-    console.log('pageCategory:', pageCategory);
-    console.log('addItemsButton:', addItemsButton);
-    
-    if (filterItem && pageCategory && addItemsButton) {
-        filterItem.addEventListener('click', function() {
-            console.log('Catalog categories clicked');
-            pageCategory.classList.toggle('active');
-        });
-    
-        addItemsButton.addEventListener('click', function() {
-            console.log('Add items clicked');
-            pageCategory.classList.remove('active');
-        });
-    } else {
-        console.error('One or more elements not found');
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".category-section");
+    const menuItems = document.querySelectorAll(".navigation .nav-item");
+  
+    if (sections.length === 0 || menuItems.length === 0) {
+      console.error("Sections or menu items not found.");
+      return;
     }
-    
-});
+  
+    window.addEventListener("scroll", () => {
+      let currentSection = "";
+  
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.pageYOffset >= sectionTop - 60) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+  
+      menuItems.forEach(item => {
+        item.classList.remove("active");
+        if (item.getAttribute("href").substring(1) === currentSection) {
+          item.classList.add("active");
+        }
+      });
+    });
+  });
 
-
+  
