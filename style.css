@@ -1404,7 +1404,7 @@ nav ul li a.active {
 .menu-list__book{
   background-color: #fff;
   height: 250px;
-  max-width: 191px;
+  max-width: 43vw;
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
@@ -1433,7 +1433,7 @@ nav ul li a.active {
   padding: 6px 30px;
   position: absolute;
   transform: translate(4%, 18%);
-  width: 90%;
+  width: 92%;
 
 }
 
@@ -1460,7 +1460,7 @@ section.expanded h2::after {
 section.expanded .menu-category {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 8px;
   font-family: "SF Pro Display", sans-serif;
 }
 
