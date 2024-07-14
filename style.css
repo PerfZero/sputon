@@ -224,8 +224,8 @@ a {
   border-top: 1px solid #ddd;
   justify-content: space-between;
   width: 100%;
+  z-index: 5;
   color: #1a4265;
-  
 }
 
 .footers {
@@ -1468,4 +1468,162 @@ section.expanded .menu-category {
 
 button.toggle-btn {
   margin-left: 10px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+  height: 89%;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  /* width: 80%; */
+  transition: transform 0.3s ease-out;
+  border-radius: 16px;
+}
+
+.modal.opening .modal-content {
+  transform: translateY(100%);
+}
+
+.modal.closing .modal-content {
+  transform: translateY(100%);
+} 
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.modal-description {
+  text-align: left;
+  font-size: 12px;
+  color: #6d7882;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.modal-detailed-description {
+  margin: 15px 0 5px 0;
+  text-align: left;
+  flex: 1;
+}
+
+.quantity-controls {
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  height: 49px;  border-radius: 16px;
+}
+
+.quantity-controls button {
+  background: none;
+  color: #000;
+  border: none;
+  display: block;
+  /* padding: 12px 30px; */
+  /* background-color: #d53e76; */
+  color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  /* border: 3px solid #d53e76;*/
+  color: #000;
+  padding: 10px 20px;
+  font-family: "SF Pro Display", sans-serif;
+}
+
+#modal-order-button{
+  display: flex;
+  /* padding: 0; */
+  /* height: 100%; */
+  gap: 5px;
+  font-size: 16px;
+  background-color: #d53e76;
+  color: white;
+  border-radius: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 500;
+  border: 3px solid #d53e76;
+}
+
+.quantity-controls button:hover {
+  background: none;
+  border: none;
+
+  color: #000;
+}
+
+.quantity-controls .btn {
+  margin: 0 5px;
+  color: #1a4265;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.quantity-controls .btn:hover {
+  margin: 0 5px;
+  color: #1a4265;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.quantity-controls #quantity {
+  margin: 0 5px;
+  color: #1a4265;
+  font-size: 19px;
+  font-weight: 500;
+  
+}
+
+.modal-price {
+  font-weight: 500;}
+
+
+
+.contor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+
 }
