@@ -125,14 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('hidden');
     });
     
-    const closeButtons = document.querySelectorAll('.modal');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            modal.classList.remove('open');
-            overlay.style.display = 'none';
-            document.body.classList.remove('hidden');
-        });
-    });
+
 
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
