@@ -287,3 +287,11 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartUI();
     });
 });
+
+window.addEventListener('popstate', function(event) {
+    // Предотвращаем выход с сайта
+    event.preventDefault();
+    
+    // Переходим на предыдущую страницу
+    history.back();
+});
