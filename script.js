@@ -138,4 +138,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300); // Длительность анимации
         }
     });
+
+    // Добавляем обработчик для закрытия модального окна при клике вне его области
+    document.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.add('closing');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.classList.remove('closing');
+            }, 300); // Длительность анимации
+        }
+    });
 });
