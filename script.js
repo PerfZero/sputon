@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 50); // Небольшая задержка перед применением перехода
         });
     });
+
+    // Обработчик для предотвращения обновления страницы при тяге вниз
+overlay.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+});
     
 
     decreaseQuantityButton.addEventListener('click', function() {
