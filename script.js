@@ -288,19 +288,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-(function() {
-    var { retrieveLaunchParams, postEvent } = window.tmajs.sdk;
-    var lp = retrieveLaunchParams();
-    if (['macos', 'tdesktop', 'weba', 'web', 'webk'].includes(lp.platform)) return;
-    postEvent('web_app_expand');
-    document.body.classList.add('mobile-body');
-    document.getElementById('wrap').classList.add('mobile-wrap');
-    document.getElementById('content').classList.add('mobile-content');
-})();
+// Select the element where you want to disable swipe down to close (e.g., body or specific container)
+const appContainer = document.body; // Replace with the appropriate container selector if needed
 
-const overflow = 100
-document.body.style.overflowY = 'hidden'
-document.body.style.marginTop = `${overflow}px`
-document.body.style.height = window.innerHeight + overflow + "px"
-document.body.style.paddingBottom = `${overflow}px`
-window.scrollTo(0, overflow)
+// Variable to track the start Y position of touch
+let startY = 0;
+
+// Event listener for touchstart to capture the starting Y position
+appContainer.addEventListener('touchstart', function(event) {
+    startY = event.touches[0].clientY;
+});
+
+// Event listener for touchmove to prevent default if swipe down is detected
+appContainer.addEventListener('touchmove', function(event) {
+    let currentY = event.touches[0].clientY;
+    let deltaY = currentY - startY;
+
+    // Check if the swipe direction is downwards and prevent default behavior
+    if (deltaY > 0) {
+        event.preventDefault();
+    }
+});
+
+// Optional: You can also handle touchend if needed
+appContainer.addEventListener('touchend', function(event) {
+    // Add any necessary logic for touch end if required
+});
