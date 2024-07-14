@@ -289,8 +289,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const overflow = 100
-document.body.style.overflowY = 'hidden'
 document.body.style.marginTop = `${overflow}px`
 document.body.style.height = window.innerHeight + overflow + "px"
 document.body.style.paddingBottom = `${overflow}px`
 window.scrollTo(0, overflow)
+
+document.querySelector('.menu-list__book').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+    document.querySelector('.overlay_mod').classList.add('active');
+    document.body.classList.add('overlay-hidden');
+});
+
+document.querySelector('.overlay_mod').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+    document.querySelector('.overlay_mod').classList.remove('active');
+    document.body.classList.remove('overlay-hidden');
+});

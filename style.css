@@ -1851,3 +1851,6 @@ button.toggle-btn {
   height: calc(100% + 1px);
 }
 
+body.overlay-hidden {
+  overflow: hidden;
+}
