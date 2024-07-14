@@ -288,14 +288,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-        // Initialize the Telegram Web App
-        window.Telegram.WebApp.ready();
-
-        // Enable close confirmation
-        window.Telegram.WebApp.enableClosingConfirmation();
-
-        // Optional: Handle the closing event
-        window.Telegram.WebApp.onEvent('closing', function() {
-            // You can add any additional logic here if needed
-            console.log('User attempted to close the Web App');
-        });
+const overflow = 100
+document.body.style.overflowY = 'hidden'
+document.body.style.marginTop = `${overflow}px`
+document.body.style.height = window.innerHeight + overflow + "px"
+document.body.style.paddingBottom = `${overflow}px`
+window.scrollTo(0, overflow)
