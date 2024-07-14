@@ -102,6 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
             modalDescription.textContent = item.querySelector('.stat-label.stat-market-l').textContent;
             modalDetailedDescription.textContent = item.querySelector('.stat-value.stat-market-d').textContent;
             currentPrice = parseInt(item.querySelector('.btn.buy').textContent);
+            currentQuantity = 1; // Reset quantity to 1 for new item
+            quantityElement.textContent = currentQuantity; // Reset displayed quantity to 1
             updatePrice();
             modal.classList.add('opening');
             setTimeout(() => {
@@ -162,7 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
             quantity: currentQuantity,
             price: currentPrice * currentQuantity
         };
-        cart.push(product);
+        const existingItem = cart.find(item => item.title === product.title);
+        if (existingItem) {
+            existingItem.quantity += product.quantity;
+        } else {
+            cart.push(product);
+        }
         updateCartUI();
         modal.style.display = 'none';
     });
@@ -175,12 +182,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
+                <div class="cart-item-image">
                     <img src="${item.image}" alt="${item.title}" width="50">
+                </div>
                 <div class="cart-item-details">
-                                <div class="cart-item-details__text">
                     <div class="cart-item-title">${item.title}</div>
                     <div class="cart-item-description">${item.description}</div>
-                    </div>
                     <div class="cart-item-quantity-controls">
                         <button class="decrease-quantity" data-index="${index}">-</button>
                         <span class="quantity">${item.quantity}</span>
@@ -190,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             cartItems.appendChild(itemDiv);
             totalCount += item.quantity;
-            totalPrice += item.price;
+            totalPrice += item.price * item.quantity; // Multiply price by quantity
         });
         cartCount.textContent = totalCount;
         totalPriceElement.textContent = `: ${totalPrice}Р`;
