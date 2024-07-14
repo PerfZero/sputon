@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartIcon = document.querySelector('.cart');
     const clearCartButton = document.getElementById('clear-cart');
     const totalPriceElement = document.getElementById('total-price');
-    const modalSwipeArea = document.querySelector('.modal-swipe-area');
+    const modalSwipeArea = document.querySelector('.modal-swipe-area'); // Добавлено для свайпа
     let currentQuantity = 1;
     let currentPrice = 0;
     let cart = [];
@@ -131,48 +131,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     modalSwipeArea.addEventListener('touchstart', function(event) {
         startY = event.touches[0].clientY;
-        lastY = startY; // Для отслеживания последнего положения Y
     });
-    
-    modalSwipeArea.addEventListener('touchmove', function(event) {
-        if (!startY) {
-            return;
-        }
-    
-        const currentY = event.touches[0].clientY;
-        const deltaY = currentY - lastY;
-    
-        // Применение трансформации к контенту модального окна при свайпе
-        modalContent.style.transform = `translateY(${deltaY}px)`;
-    
-        // Обновление последнего положения Y
-        lastY = currentY;
-    
-        // Добавление класса для анимации или стилизации при свайпе
-        modalContent.classList.add('swiping');
-    });
-    
+
     modalSwipeArea.addEventListener('touchend', function(event) {
-        if (!startY) {
-            return;
-        }
-    
         endY = event.changedTouches[0].clientY;
-        const deltaY = endY - startY;
-    
-        if (deltaY > 100) { // Примерное расстояние для закрытия модального окна
+        if (endY > startY && endY - startY > 100) {
             closeModal();
-        } else {
-            // Возврат модального окна в исходное положение
-            modalContent.style.transform = '';
-            modalContent.classList.remove('swiping');
         }
-    
-        // Сброс переменных startY и lastY
-        startY = null;
-        lastY = null;
     });
-    
 
     document.addEventListener('click', function(event) {
         if (event.target === modal) {
