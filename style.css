@@ -1353,8 +1353,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 15px;
-}
+  padding: 12px 0 0 0;}
 
 nav ul li a {
   color: #8e8e92;
@@ -1421,7 +1420,7 @@ nav ul li a.active {
 }
 
 .fixed li {
-  padding: 12px 0;
+  padding: 12px 0 0 0;;
 }
 
 .market-stat {
@@ -1484,23 +1483,28 @@ button.toggle-btn {
 }
 
 
+
 .modal-content {
   height: 89%;
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 15% auto 0% auto;
   padding: 20px;
   border: 1px solid #888;
   /* width: 80%; */
   transition: transform 0.3s ease-out;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal.opening .modal-content {
   transform: translateY(100%);
+  opacity: 0;
 }
 
 .modal.closing .modal-content {
   transform: translateY(100%);
+  
 } 
 
 .close-button {
