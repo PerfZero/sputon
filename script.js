@@ -288,29 +288,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Select the element where you want to disable swipe down to close (e.g., body or specific container)
-const appContainer = document.body; // Replace with the appropriate container selector if needed
+        // Initialize the Telegram Web App
+        window.Telegram.WebApp.ready();
 
-// Variable to track the start Y position of touch
-let startY = 0;
+        // Enable close confirmation
+        window.Telegram.WebApp.enableClosingConfirmation();
 
-// Event listener for touchstart to capture the starting Y position
-appContainer.addEventListener('touchstart', function(event) {
-    startY = event.touches[0].clientY;
-});
-
-// Event listener for touchmove to prevent default if swipe down is detected
-appContainer.addEventListener('touchmove', function(event) {
-    let currentY = event.touches[0].clientY;
-    let deltaY = currentY - startY;
-
-    // Check if the swipe direction is downwards and prevent default behavior
-    if (deltaY > 0) {
-        event.preventDefault();
-    }
-});
-
-// Optional: You can also handle touchend if needed
-appContainer.addEventListener('touchend', function(event) {
-    // Add any necessary logic for touch end if required
-});
+        // Optional: Handle the closing event
+        window.Telegram.WebApp.onEvent('closing', function() {
+            // You can add any additional logic here if needed
+            console.log('User attempted to close the Web App');
+        });
