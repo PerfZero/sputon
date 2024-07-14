@@ -134,6 +134,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'style') {
+                if (overlay.style.display === 'none') {
+                    modal.classList.remove('open');
+                    document.body.classList.remove('hidden');
+                }
+            }
+        });
+    });
+    
+    observer.observe(overlay, { attributes: true });
+
     
     
 
