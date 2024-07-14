@@ -118,9 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    overlay.addEventListener('touchmove', function(event) {
-        event.preventDefault();
-    }, { passive: false });
+    
     
 
     decreaseQuantityButton.addEventListener('click', function() {
@@ -149,6 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
         startY = event.touches[0].clientY;
         isDragging = true;
         modal.style.transition = 'none'; // Отключить анимацию во время перетаскивания
+    });
+
+    overlay.addEventListener('touchstart', function(event) {
+        startY = event.touches[0].clientY;
+    });
+    
+    overlay.addEventListener('touchmove', function(event) {
+        let currentY = event.touches[0].clientY;
+        let deltaY = currentY - startY;
+    
+        // Предотвращаем обновление страницы только при свайпе вниз
+        if (deltaY > 0) {
+            event.preventDefault();
+        }
     });
 
     modalSwipeArea.addEventListener('touchmove', function(event) {
