@@ -297,3 +297,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('wrap').classList.add('mobile-wrap');
     document.getElementById('content').classList.add('mobile-content');
 })();
+
+const overflow = 100
+document.body.style.overflowY = 'hidden'
+document.body.style.marginTop = `${overflow}px`
+document.body.style.height = window.innerHeight + overflow + "px"
+document.body.style.paddingBottom = `${overflow}px`
+window.scrollTo(0, overflow)
