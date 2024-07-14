@@ -182,12 +182,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
-                <div class="cart-item-image">
                     <img src="${item.image}" alt="${item.title}" width="50">
-                </div>
                 <div class="cart-item-details">
+                <div class="cart-item-details__text">
                     <div class="cart-item-title">${item.title}</div>
                     <div class="cart-item-description">${item.description}</div>
+                    </div>
                     <div class="cart-item-quantity-controls">
                         <button class="decrease-quantity" data-index="${index}">-</button>
                         <span class="quantity">${item.quantity}</span>
