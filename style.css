@@ -1821,6 +1821,10 @@ button.toggle-btn {
   
 }
 
+.hidden{
+  overflow: hidden;
+}
+
 .overlay_mod {
   display: none;
   position: fixed;
