@@ -118,10 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Обработчик для предотвращения обновления страницы при тяге вниз
-overlay.addEventListener('touchmove', function(event) {
-    event.preventDefault();
-});
+    overlay.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+    }, { passive: false });
     
 
     decreaseQuantityButton.addEventListener('click', function() {
