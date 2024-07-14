@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modal');
+    const modalContent = document.querySelector('.modal-content');
     const modalImage = document.getElementById('modal-image');
     const modalTitle = document.getElementById('modal-title');
     const modalDescription = document.getElementById('modal-description');
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartIcon = document.querySelector('.cart');
     const clearCartButton = document.getElementById('clear-cart');
     const totalPriceElement = document.getElementById('total-price');
+    const modalSwipeArea = document.querySelector('.modal-swipe-area');
     let currentQuantity = 1;
     let currentPrice = 0;
     let cart = [];
@@ -102,14 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
             modalDescription.textContent = item.querySelector('.stat-label.stat-market-l').textContent;
             modalDetailedDescription.textContent = item.querySelector('.stat-value.stat-market-d').textContent;
             currentPrice = parseInt(item.querySelector('.btn.buy').textContent);
-            currentQuantity = 1; // Reset quantity to 1 for new item
-            quantityElement.textContent = currentQuantity; // Reset displayed quantity to 1
+            currentQuantity = 1; // Сбросить количество до 1 для нового товара
+            quantityElement.textContent = currentQuantity; // Сброс отображаемого количества до 1
             updatePrice();
-            modal.classList.add('opening');
-            setTimeout(() => {
-                modal.style.display = 'block';
-                modal.classList.remove('opening');
-            }, 10);
+            modal.classList.add('open');
         });
     });
 
@@ -131,28 +129,54 @@ document.addEventListener('DOMContentLoaded', function() {
         modalPrice.textContent = `${currentPrice * currentQuantity}Р`;
     }
 
-    modal.addEventListener('touchstart', function(event) {
+    modalSwipeArea.addEventListener('touchstart', function(event) {
         startY = event.touches[0].clientY;
+        lastY = startY; // Для отслеживания последнего положения Y
     });
-
-    modal.addEventListener('touchend', function(event) {
-        endY = event.changedTouches[0].clientY;
-        if (endY > startY && endY - startY > 100) {
-            modal.classList.add('closing');
-            setTimeout(() => {
-                modal.style.display = 'none';
-                modal.classList.remove('closing');
-            }, 300);
+    
+    modalSwipeArea.addEventListener('touchmove', function(event) {
+        if (!startY) {
+            return;
         }
+    
+        const currentY = event.touches[0].clientY;
+        const deltaY = currentY - lastY;
+    
+        // Применение трансформации к контенту модального окна при свайпе
+        modalContent.style.transform = `translateY(${deltaY}px)`;
+    
+        // Обновление последнего положения Y
+        lastY = currentY;
+    
+        // Добавление класса для анимации или стилизации при свайпе
+        modalContent.classList.add('swiping');
     });
+    
+    modalSwipeArea.addEventListener('touchend', function(event) {
+        if (!startY) {
+            return;
+        }
+    
+        endY = event.changedTouches[0].clientY;
+        const deltaY = endY - startY;
+    
+        if (deltaY > 100) { // Примерное расстояние для закрытия модального окна
+            closeModal();
+        } else {
+            // Возврат модального окна в исходное положение
+            modalContent.style.transform = '';
+            modalContent.classList.remove('swiping');
+        }
+    
+        // Сброс переменных startY и lastY
+        startY = null;
+        lastY = null;
+    });
+    
 
     document.addEventListener('click', function(event) {
         if (event.target === modal) {
-            modal.classList.add('closing');
-            setTimeout(() => {
-                modal.style.display = 'none';
-                modal.classList.remove('closing');
-            }, 300);
+            closeModal();
         }
     });
 
@@ -171,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cart.push(product);
         }
         updateCartUI();
-        modal.style.display = 'none';
+        closeModal();
     });
 
     function updateCartUI() {
@@ -182,11 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const itemDiv = document.createElement('div');
             itemDiv.classList.add('cart-item');
             itemDiv.innerHTML = `
-                    <img src="${item.image}" alt="${item.title}" width="50">
+                <img src="${item.image}" alt="${item.title}" width="50">
                 <div class="cart-item-details">
-                <div class="cart-item-details__text">
-                    <div class="cart-item-title">${item.title}</div>
-                    <div class="cart-item-description">${item.description}</div>
+                    <div class="cart-item-details__text">
+                        <div class="cart-item-title">${item.title}</div>
+                        <div class="cart-item-description">${item.description}</div>
                     </div>
                     <div class="cart-item-quantity-controls">
                         <button class="decrease-quantity" data-index="${index}">-</button>
@@ -197,12 +221,12 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             cartItems.appendChild(itemDiv);
             totalCount += item.quantity;
-            totalPrice += item.price * item.quantity; // Multiply price by quantity
+            totalPrice += item.price * item.quantity; // Умножить цену на количество
         });
         cartCount.textContent = totalCount;
         totalPriceElement.textContent = `: ${totalPrice}Р`;
 
-        // Add event listeners for quantity controls
+        // Добавление обработчиков событий для элементов управления количеством
         document.querySelectorAll('.decrease-quantity').forEach(button => {
             button.addEventListener('click', function() {
                 const index = this.getAttribute('data-index');
@@ -232,6 +256,10 @@ document.addEventListener('DOMContentLoaded', function() {
         totalPriceElement.textContent = `: ${totalPrice}Р`;
     }
 
+    function closeModal() {
+        modal.classList.remove('open');
+    }
+
     cartIcon.addEventListener('click', function() {
         cartPopup.style.display = 'flex';
     });
@@ -245,3 +273,5 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartUI();
     });
 });
+
+
