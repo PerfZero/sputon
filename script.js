@@ -111,10 +111,26 @@ document.addEventListener('DOMContentLoaded', function() {
             updatePrice();
             modal.classList.add('open');
             overlay.style.display = 'block'; // Показать overlay
-            
+            document.body.classList.add('hidden'); // Добавить класс 'hidden' к тегу body
+    
             setTimeout(function() {
                 overlay.style.opacity = '0.5'; // Установить плавное значение opacity
             }, 50); // Небольшая задержка перед применением перехода
+        });
+    });
+    
+    overlay.addEventListener('click', function() {
+        modal.classList.remove('open');
+        overlay.style.display = 'none';
+        document.body.classList.remove('hidden');
+    });
+    
+    const closeButtons = document.querySelectorAll('.modal');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            modal.classList.remove('open');
+            overlay.style.display = 'none';
+            document.body.classList.remove('hidden');
         });
     });
 
@@ -294,20 +310,3 @@ document.body.style.height = window.innerHeight + overflow + "px"
 document.body.style.paddingBottom = `${overflow}px`
 window.scrollTo(0, overflow)
 
-document.querySelector('.menu-list__book').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'block';
-    document.querySelector('.overlay_mod').classList.add('active');
-    document.body.classList.add('overlay-hidden');
-});
-
-document.querySelector('.modal').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-    document.querySelector('.overlay_mod').classList.remove('active');
-    document.body.classList.remove('overlay-hidden');
-});
-
-document.querySelector('.overlay_mod').addEventListener('click', function() {
-    document.getElementById('modal').style.display = 'none';
-    document.querySelector('.overlay_mod').classList.remove('active');
-    document.body.classList.remove('overlay-hidden');
-});
