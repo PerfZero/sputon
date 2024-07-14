@@ -92,7 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartIcon = document.querySelector('.cart');
     const clearCartButton = document.getElementById('clear-cart');
     const totalPriceElement = document.getElementById('total-price');
-    const modalSwipeArea = document.querySelector('.modal-swipe-area'); // Добавлено для свайпа
+    const modalSwipeArea = document.querySelector('.modal-swipe-areas'); // Добавлено для свайпа
+    const overlay = document.querySelector('.overlay_mod'); // Оверлей для затемнения
+
     let currentQuantity = 1;
     let currentPrice = 0;
     let cart = [];
@@ -108,8 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
             quantityElement.textContent = currentQuantity; // Сброс отображаемого количества до 1
             updatePrice();
             modal.classList.add('open');
+            overlay.style.display = 'block'; // Показать overlay
+            
+            setTimeout(function() {
+                overlay.style.opacity = '0.5'; // Установить плавное значение opacity
+            }, 50); // Небольшая задержка перед применением перехода
         });
     });
+    
 
     decreaseQuantityButton.addEventListener('click', function() {
         if (currentQuantity > 1) {
@@ -129,16 +137,44 @@ document.addEventListener('DOMContentLoaded', function() {
         modalPrice.textContent = `${currentPrice * currentQuantity}Р`;
     }
 
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
     modalSwipeArea.addEventListener('touchstart', function(event) {
         startY = event.touches[0].clientY;
+        isDragging = true;
+        modal.style.transition = 'none'; // Отключить анимацию во время перетаскивания
+    });
+
+    modalSwipeArea.addEventListener('touchmove', function(event) {
+        if (!isDragging) return;
+        currentY = event.touches[0].clientY;
+        const distance = currentY - startY;
+        if (distance > 0) {
+            modal.style.transform = `translateY(${distance}px)`;
+        }
     });
 
     modalSwipeArea.addEventListener('touchend', function(event) {
-        endY = event.changedTouches[0].clientY;
-        if (endY > startY && endY - startY > 100) {
-            closeModal();
+        isDragging = false;
+        const distance = currentY - startY;
+        modal.style.transition = 'transform 0.3s ease, opacity 0.3s ease'; // Восстановить анимацию
+
+        if (distance > 100) { // Закрытие модального окна при смещении вниз на 100px
+            modal.style.transform = `translateY(100%)`; // Полностью скрыть модальное окно вниз
+            setTimeout(closeModal, 300); // Закрыть модальное окно после анимации
+        } else {
+            modal.style.transform = 'translateY(0)'; // Возвращаем на место, если смещение недостаточное
         }
     });
+
+    function closeModal() {
+        modal.classList.remove('open');
+        modal.style.transform = 'translateY(0)'; // Сбросить позицию модального окна
+        overlay.style.display = 'none'; // Скрыть оверлей
+
+    }
 
     document.addEventListener('click', function(event) {
         if (event.target === modal) {
@@ -222,10 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
         totalPriceElement.textContent = `: ${totalPrice}Р`;
     }
 
-    function closeModal() {
-        modal.classList.remove('open');
-    }
-
     cartIcon.addEventListener('click', function() {
         cartPopup.style.display = 'flex';
     });
@@ -239,5 +271,3 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartUI();
     });
 });
-
-
