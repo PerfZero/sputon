@@ -300,6 +300,12 @@ document.querySelector('.menu-list__book').addEventListener('click', function() 
     document.body.classList.add('overlay-hidden');
 });
 
+document.querySelector('.modal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+    document.querySelector('.overlay_mod').classList.remove('active');
+    document.body.classList.remove('overlay-hidden');
+});
+
 document.querySelector('.overlay_mod').addEventListener('click', function() {
     document.getElementById('modal').style.display = 'none';
     document.querySelector('.overlay_mod').classList.remove('active');
