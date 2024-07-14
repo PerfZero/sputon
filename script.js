@@ -288,10 +288,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener('popstate', function(event) {
-    // Предотвращаем выход с сайта
-    event.preventDefault();
-    
-    // Переходим на предыдущую страницу
-    history.back();
-});
+(function() {
+    var { retrieveLaunchParams, postEvent } = window.tmajs.sdk;
+    var lp = retrieveLaunchParams();
+    if (['macos', 'tdesktop', 'weba', 'web', 'webk'].includes(lp.platform)) return;
+    postEvent('web_app_expand');
+    document.body.classList.add('mobile-body');
+    document.getElementById('wrap').classList.add('mobile-wrap');
+    document.getElementById('content').classList.add('mobile-content');
+})();
