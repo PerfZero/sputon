@@ -116,27 +116,32 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 overlay.style.opacity = '0.5'; // Установить плавное значение opacity
             }, 50); // Небольшая задержка перед применением перехода
-            
-            // Установка opacity в 1 только при открытии модального окна
-            modal.style.opacity = '1';
         });
     });
     
     overlay.addEventListener('click', function() {
-        closeModal();
+        modal.classList.remove('open');
+        overlay.style.display = 'none';
+        document.body.classList.remove('hidden');
     });
+    
+
 
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             if (mutation.attributeName === 'style') {
                 if (overlay.style.display === 'none') {
-                    closeModal();
+                    modal.classList.remove('open');
+                    document.body.classList.remove('hidden');
                 }
             }
         });
     });
     
     observer.observe(overlay, { attributes: true });
+
+    
+    
 
     decreaseQuantityButton.addEventListener('click', function() {
         if (currentQuantity > 1) {
@@ -163,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     modalSwipeArea.addEventListener('touchstart', function(event) {
         startY = event.touches[0].clientY;
         isDragging = true;
-        
         modal.style.transition = 'none'; // Отключить анимацию во время перетаскивания
     });
 
@@ -193,15 +197,11 @@ document.addEventListener('DOMContentLoaded', function() {
     modalSwipeArea.addEventListener('touchend', function(event) {
         isDragging = false;
         const distance = currentY - startY;
-        modal.style.transition = 'transform 0.3s ease'; // Восстановить анимацию
-        
+        modal.style.transition = 'transform 0.3s ease, opacity 0.3s ease'; // Восстановить анимацию
 
         if (distance > 100) { // Закрытие модального окна при смещении вниз на 100px
             modal.style.transform = `translateY(100%)`; // Полностью скрыть модальное окно вниз
-            setTimeout(() => {
-                modal.style.opacity = '0'; // Плавное исчезновение
-                setTimeout(closeModal, 200); // Закрыть модальное окно после анимации
-            }, 200); 
+            setTimeout(closeModal, 300); // Закрыть модальное окно после анимации
         } else {
             modal.style.transform = 'translateY(0)'; // Возвращаем на место, если смещение недостаточное
         }
@@ -209,11 +209,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeModal() {
         modal.classList.remove('open');
-        modal.style.transform = ''; // Сбросить позицию модального окна
-        modal.style.transition = ''; // Сбросить анимацию
-        modal.style.opacity = '0'; // Установить opacity в 0 при закрытии
+        modal.style.transform = 'translateY(0)'; // Сбросить позицию модального окна
         overlay.style.display = 'none'; // Скрыть оверлей
-        document.body.classList.remove('hidden'); // Удалить класс 'hidden' с тега body
+
     }
 
     document.addEventListener('click', function(event) {
@@ -312,9 +310,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-const overflow = 10
+const overflow = 100
 document.body.style.marginTop = `${overflow}px`
 document.body.style.height = window.innerHeight + overflow + "px"
 document.body.style.paddingBottom = `${overflow}px`
 window.scrollTo(0, overflow)
+
