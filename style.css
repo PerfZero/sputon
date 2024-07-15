@@ -1492,6 +1492,7 @@ button.toggle-btn {
   visibility: visible;
   transition: opacity 0.3s ease, visibility 0s linear,
     background-color 0.3s ease; /* Анимация для фона */
+  
 }
 
 .modal-content {
