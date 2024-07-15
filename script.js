@@ -313,8 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const overflow = 100
-document.body.style.overflowY = 'hidden'
+const overflow = 10
 document.body.style.marginTop = `${overflow}px`
 document.body.style.height = window.innerHeight + overflow + "px"
 document.body.style.paddingBottom = `${overflow}px`
