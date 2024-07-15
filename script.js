@@ -308,12 +308,16 @@ document.addEventListener('DOMContentLoaded', function() {
     cartIcon.addEventListener('click', function() {
         cartPopup.classList.add('open');
         overlay.style.display = 'block'; // Показать overlay
+        document.body.classList.add('hidden'); // Добавить класс 'hidden' к тегу body
+
 
     });
     
     closeCart.addEventListener('click', function() {
         cartPopup.classList.remove('open');
         overlay.style.display = 'none'; // Показать overlay
+        document.body.classList.add('auto'); // Добавить класс 'hidden' к тегу body
+
 
     });
 
