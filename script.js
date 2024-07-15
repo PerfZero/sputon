@@ -306,11 +306,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     cartIcon.addEventListener('click', function() {
-        cartPopup.style.display = 'flex';
-    });
+        cartPopup.classList.add('open');
+        overlay.style.display = 'block'; // Показать overlay
 
+    });
+    
     closeCart.addEventListener('click', function() {
-        cartPopup.style.display = 'none';
+        cartPopup.classList.remove('open');
+        overlay.style.display = 'none'; // Показать overlay
+
     });
 
     clearCartButton.addEventListener('click', function() {
