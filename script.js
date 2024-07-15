@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.transform = `translateY(100%)`; // Полностью скрыть модальное окно вниз
             setTimeout(() => {
                 modal.style.opacity = '0'; // Плавное исчезновение
-                setTimeout(closeModal, 100); // Закрыть модальное окно после анимации
-            }, 100); 
+                setTimeout(closeModal, 200); // Закрыть модальное окно после анимации
+            }, 200); 
         } else {
             modal.style.transform = 'translateY(0)'; // Возвращаем на место, если смещение недостаточное
         }
