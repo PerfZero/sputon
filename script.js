@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const overflow = 100;
             document.body.style.height = window.innerHeight + overflow + "px";
             document.body.style.paddingBottom = `${overflow}px`;
-            window.scrollTo(0, overflow);
+            window.scrollBy(0, overflow);
     
             modal.classList.add('open');
             overlay.style.display = 'block'; // Показать overlay
