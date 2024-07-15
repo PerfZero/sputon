@@ -1327,8 +1327,8 @@ textarea {
 }
 
 nav {
-  position: relative;
-  top: 42%; /* начальная позиция navbar на середине экрана */
+  position: absolute;
+  top: 490px;
   width: 100%;
   z-index: 2;
   background-color: #fff;
@@ -1340,6 +1340,10 @@ nav.fixed {
   top: 0;
   height: 42px;
   overflow: scroll;
+}
+
+#content{
+  margin-top: 30px;
 }
 
 nav ul {
