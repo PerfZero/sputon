@@ -1679,10 +1679,11 @@ button.toggle-btn {
   border-radius: 5px;
   position: relative;
   width: 100%;
-  height: 96%;
+  height: 84%;
   font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
+  transform: translateY(56px);
 }
 
 .close-cart {
@@ -1698,6 +1699,7 @@ button.toggle-btn {
   bottom: 95px;
   right: 20px;
   cursor: pointer;
+  z-index: 999;
 }
 
 #cart-count {
@@ -1728,6 +1730,7 @@ button.toggle-btn {
 .cart-content h2 {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 #clear-cart {
