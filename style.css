@@ -1393,9 +1393,7 @@ nav ul li a.active {
   background-color: #d53e76;
 }
 
-#content {
-  padding-top: 60px; /* For fixed navbar */
-}
+
 
 .item__book img {
   width: 100%;
