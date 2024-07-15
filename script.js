@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlay.style.opacity = '0.5'; // Установить плавное значение opacity
             }, 50); // Небольшая задержка перед применением перехода
         });
+        
     });
     
     overlay.addEventListener('click', function() {
