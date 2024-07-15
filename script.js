@@ -109,6 +109,11 @@ document.addEventListener('DOMContentLoaded', function() {
             currentQuantity = 1; // Сбросить количество до 1 для нового товара
             quantityElement.textContent = currentQuantity; // Сброс отображаемого количества до 1
             updatePrice();
+            const overflow = 100;
+            document.body.style.height = window.innerHeight + overflow + "px";
+            document.body.style.paddingBottom = `${overflow}px`;
+            window.scrollTo(0, overflow);
+    
             modal.classList.add('open');
             overlay.style.display = 'block'; // Показать overlay
             document.body.classList.add('hidden'); // Добавить класс 'hidden' к тегу body
@@ -117,15 +122,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 overlay.style.opacity = '0.5'; // Установить плавное значение opacity
             }, 50); // Небольшая задержка перед применением перехода
         });
-        
     });
     
     overlay.addEventListener('click', function() {
         modal.classList.remove('open');
         overlay.style.display = 'none';
         document.body.classList.remove('hidden');
-    });
     
+        // Возвращаем стили body к исходному состоянию
+        document.body.style.height = '';
+        document.body.style.paddingBottom = '';
+        window.scrollTo(0, 0);
+    });
 
 
     const observer = new MutationObserver((mutations) => {
@@ -310,10 +318,4 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartUI();
     });
 });
-
-const overflow = 100
-document.body.style.marginTop = `${overflow}px`
-document.body.style.height = window.innerHeight + overflow + "px"
-document.body.style.paddingBottom = `${overflow}px`
-window.scrollTo(0, overflow)
 
